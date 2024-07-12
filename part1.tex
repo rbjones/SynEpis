@@ -1,0 +1,98 @@
+﻿% $Id: part1.tex $
+\documentclass[10pt,titlepage]{book}
+\usepackage{makeidx}
+\newcommand{\ignore}[1]{}
+\usepackage{graphicx}
+\usepackage[unicode]{hyperref}
+\pagestyle{plain}
+\usepackage[paperwidth=5.25in,paperheight=8in,hmargin={0.75in,0.5in},vmargin={0.5in,0.5in},includehead,includefoot]{geometry}
+\hypersetup{pdfauthor={Roger Bishop Jones}}
+\hypersetup{pdftitle={Oracular AI v2}}
+\hypersetup{colorlinks=true, urlcolor=red, citecolor=blue, filecolor=blue, linkcolor=blue}
+%\usepackage{html}
+\usepackage{paralist}
+\usepackage{relsize}
+\usepackage{verbatim}
+\usepackage{enumerate}
+\usepackage{longtable}
+\usepackage{url}
+\newcommand{\hreg}[2]{\href{#1}{#2}\footnote{\url{#1}}}
+\makeindex
+
+\title{\bf\LARGE Synthetic  Epistemology\\ and\\ Artificial Intelligence}
+\author{Roger~Bishop~Jones}
+\date{\small 2024-06-28}
+
+
+\begin{document}
+%\frontmatter
+
+%\begin{abstract}
+% An epistemological synthesis with oriented toward the opportunities offered by Artificial Intelligence.
+%
+%\end{abstract}
+                               
+\begin{titlepage}
+\maketitle
+
+%\vfill
+
+%\begin{centering}
+
+%{\footnotesize
+%copyright\ Roger~Bishop~Jones;
+%}%footnotesize
+
+%\end{centering}
+
+\end{titlepage}
+
+\ \
+
+\ignore{
+\begin{centering}
+{}
+\end{centering}
+}%ignore
+
+\setcounter{tocdepth}{2}
+{\parskip-0pt\tableofcontents}
+
+%\listoffigures
+
+%\mainmatter
+
+
+\chapter{Introduction}
+
+\input{introduction}
+
+\chapter{Varieties of Epistemology}
+
+\input{VarEpis}
+
+\input{introduction}
+
+
+\phantomsection
+\addcontentsline{toc}{section}{Bibliography}
+\bibliographystyle{rbjfmu}
+\bibliography{rbj3}
+
+\addcontentsline{toc}{section}{Index}\label{index}
+{\twocolumn[]
+{\small\printindex}}
+
+%\vfill
+
+%\tiny{
+%Started 2023-08-19
+
+
+%\href{http://www.rbjones.com/rbjpub/www/papers/p038.pdf}{http://www.rbjones.com/rbjpub/www/papers/p038.pdf}
+
+%}%tiny
+
+\end{document}
+
+% LocalWords:

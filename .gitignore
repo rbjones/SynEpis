@@ -283,6 +283,9 @@ TSWLatexianTemp*
 ./auto/*
 *.el
 
+# emacs editor backups files
+*~
+
 # expex forward references with \gathertags
 *-tags.tex
 

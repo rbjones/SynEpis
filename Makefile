@@ -6,7 +6,7 @@ PAPDIR=~/git/www.rbjones.com/src/rbjpub/www/papers
 PAPDIRTEXS=p035.tex
 LUALATEXS=part1.tex
 CONTEXTS=LogKb.tex
-TEXS=introduction.tex varepis.tex LogicalTruth.tex
+TEXS=intro2.tex varepis.tex LogicalTruth.tex
 
 PAPPDFS=$(PAPDIRTEXS:.tex=.pdf) 
 LUAPDFS=$(LUALATEXS:.tex=.pdf) 
@@ -37,9 +37,7 @@ $(CONTEXTPDFS): %.pdf: %.tex $(TEXS) $(BIBFILES) Makefile
 	context $<
 
 $(SRCDIRCPY): %: $(SRCDIR)/%
-%	@echo "SRCDIRCPY: $(SRCDIR), $(SRCDIRCPY)"
 	cp $(SRCDIR)/$@ .
 
 $(PAPDIRCPY): %: $(PAPDIR)/%
-%	@echo "PAPDIRCPY: $(PAPDIR), $(PAPDIRCPY)"
 	cp $(PAPDIR)/$@ .

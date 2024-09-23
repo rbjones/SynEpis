@@ -881,7 +881,7 @@ booktitle = "Reflections on the Foundations of Mathematics",
 }
 
 @article{fikes20,
-author = {Fikes, Richard and Garvey, Tom},
+Author = {Fikes, Richard and Garvey, Tom},
 title = {Knowledge Representation and Reasoning — A History of DARPA Leadership},
 journal = {AI Magazine},
 volume = {41},

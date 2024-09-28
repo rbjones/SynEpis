@@ -12,6 +12,11 @@
 *.cb2
 .*.lb
 
+# Texshop
+\#.*
+# Mac
+.DS_store
+
 ## Intermediate documents:
 *.dvi
 *.xdv

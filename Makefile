@@ -4,7 +4,7 @@ SRCDIR=~/git/SynEpis
 PAPDIR=~/git/www.rbjones.com/src/rbjpub/www/papers
 
 PAPDIRTEXS=p035.tex
-LUALATEXS=part1.tex
+LUALATEXS=part1.tex notes.tex
 CONTEXTS=LogKb.tex
 TEXS=intro2.tex intro4.tex Varepis.tex LogicalTruth.tex
 
@@ -15,11 +15,12 @@ CONTEXTPDFS=$(CONTEXTS:.tex=.pdf)
 BIBFILES=rbj3.bib rbjfmu.bst
 
 SRCDIRCPY=$(TEXS) $(LUALATEXS) $(CONTEXTS) $(BIBFILES) Makefile
-PAPDIRCPY=p035.tex
+PAPDIRCPY=$(PAPDIRTEXS)
+
+all: $(LUAPDFS)
 
 bdir:
 	-mkdir ../SynEpisBuild
-	cp Makefile ../SynEpisBuild
 
 $(PAPPDFS): %.pdf: %.tex $(BIBFILES) Makefile
 	lualatex $<

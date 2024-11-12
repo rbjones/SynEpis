@@ -1,7 +1,8 @@
 # Makefile 2024-06-13
 
-SRCDIR=~/git/SynEpis
-PAPDIR=~/git/www.rbjones.com/src/rbjpub/www/papers
+GITDIR=~/Documents/GitHub
+SRCDIR=$(GITDIR)/SynEpis
+PAPDIR=$(GITDIR)/www.rbjones.com/src/rbjpub/www/papers
 
 PAPDIRTEXS=p035.tex
 LUALATEXS=part1.tex notes.tex
@@ -23,7 +24,8 @@ all: $(LUAPDFS)
 	bibtex %.tex
 
 bdir:
-	-mkdir ../SynEpisBuild
+	-mkdir $(GITDIR)/SynEpisBuild
+	cp Makefile $(GITDIR)/SynEpisBuild
 
 $(PAPPDFS): %.pdf: %.tex $(BIBFILES) Makefile
 	lualatex $<

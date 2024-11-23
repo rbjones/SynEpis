@@ -7,7 +7,7 @@ PAPDIR=$(GITDIR)/www.rbjones.com/src/rbjpub/www/papers
 PAPDIRTEXS=p035.tex
 LUALATEXS=part1.tex notes.tex
 CONTEXTS=LogKb.tex
-TEXS=intro6.tex Varepis.tex LogicalTruth.tex
+TEXS=intro6.tex intro7.tex Varepis.tex LogicalTruth.tex
 
 PAPPDFS=$(PAPDIRTEXS:.tex=.pdf) 
 LUAPDFS=$(LUALATEXS:.tex=.pdf) 
@@ -24,7 +24,7 @@ all: $(LUAPDFS)
 	bibtex %.tex
 
 bdir:
-	-mkdir $(GITDIR)/SynEpisBuild
+	@-mkdir $(GITDIR)/SynEpisBuild
 	cp Makefile $(GITDIR)/SynEpisBuild
 
 $(PAPPDFS): %.pdf: %.tex $(BIBFILES) Makefile

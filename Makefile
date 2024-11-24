@@ -46,4 +46,4 @@ $(SRCDIRCPY): %: $(SRCDIR)/%
 	cp $(SRCDIR)/$@ .
 
 $(PAPDIRCPY): %: $(PAPDIR)/%
-	cp $(PAPDIR)/$@ .
+	cp $(P

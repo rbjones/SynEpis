@@ -1,13 +1,13 @@
 # Makefile 2024-06-13
 
-GITDIR=~/Documents/GitHub
+GITDIR=~/git
 SRCDIR=$(GITDIR)/SynEpis
 PAPDIR=$(GITDIR)/www.rbjones.com/src/rbjpub/www/papers
 
 PAPDIRTEXS=p035.tex
 LUALATEXS=part1.tex notes.tex
 CONTEXTS=LogKb.tex
-TEXS=intro6.tex intro7.tex Varepis.tex LogicalTruth.tex
+TEXS=intro6.tex intro7.tex Varepis.tex LogicalTruth.tex kernel.tex
 
 PAPPDFS=$(PAPDIRTEXS:.tex=.pdf) 
 LUAPDFS=$(LUALATEXS:.tex=.pdf) 

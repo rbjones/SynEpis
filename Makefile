@@ -7,7 +7,10 @@ PAPDIR=$(GITDIR)/www.rbjones.com/src/rbjpub/www/papers
 PAPDIRTEXS=p035.tex
 LUALATEXS=part1.tex notes.tex
 CONTEXTS=LogKb.tex
-TEXS=intro6.tex intro7.tex Varepis.tex LogicalTruth.tex kernel.tex
+TEXS=intro6.tex intro7.tex intro8.tex intro9.tex intro10.tex intro11.tex\
+	Varepis.tex LogicalTruth.tex \
+	kernel.tex kernel2.tex kernel3.tex \
+	ftt01.tex
 
 PAPPDFS=$(PAPDIRTEXS:.tex=.pdf) 
 LUAPDFS=$(LUALATEXS:.tex=.pdf) 

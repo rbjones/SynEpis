@@ -1,13 +1,12 @@
-% $Id: part1.tex $
+% $Id: part1.tex $ #
 \documentclass[10pt,titlepage]{book}
+\usepackage{makeidx}
 \usepackage{makeidx}
 \usepackage{graphicx}
 \usepackage{booktabs}
-\newcommand{\ignore}[1]{}
-\usepackage{graphicx}
-\usepackage[unicode]{hyperref}
-\pagestyle{plain}
+\usepackage{fontspec}
 \usepackage[paperwidth=5.25in,paperheight=8in,hmargin={0.75in,0.5in},vmargin={0.5in,0.5in},includehead,includefoot]{geometry}
+\usepackage[unicode]{hyperref}
 \hypersetup{pdfauthor={Roger Bishop Jones}}
 \hypersetup{pdftitle={Oracular AI v2}}
 \hypersetup{colorlinks=true, urlcolor=red, citecolor=blue, filecolor=blue, linkcolor=blue}
@@ -18,7 +17,20 @@
 \usepackage{enumerate}
 \usepackage{longtable}
 \usepackage{url}
+\renewcommand{\thefootnote}{\roman{footnote}}
+
+\usepackage{endnotes}
+\makeatletter
+\def\enoteheading{\chapter{\notesname}}
+\makeatother
+
+\newcommand{\ignore}[1]{}
+\newcommand{\rbjdeff}[1]{\textbf{\itshape{#1}}}
+\newcommand{\rbjdef}[1]{\rbjdeff{#1}\label{LABEL#1}\index{#1}}
+\newcommand{\rbjuse}[1]{\hyperref[LABEL#1]{\itshape{#1}}}
 \newcommand{\hreg}[2]{\href{#1}{#2}\footnote{\url{#1}}}
+
+\pagestyle{plain}
 \makeindex
 
 \title{\bf\LARGE An Epistemological Synthesis}
@@ -82,21 +94,30 @@
 
 \input{kernel3.tex}
 
+\chapter{A Philosophical Kernel 4}
+
+\input{kernel4.tex}
+
 \chapter{The Fundamental Triple Trichotomy}
 
 \input{ftt01.tex}
 
 \appendix
-  
+
+%\let\cleardoublepage\clearpage
+\theendnotes
+
 \listoftables
 %\listoffigures
 
-\phantomsection
+%\phantomsection
 \addcontentsline{toc}{section}{Bibliography}
 \bibliographystyle{rbjfmu}
 \bibliography{rbj3}
 
-\addcontentsline{toc}{section}{Index}\label{index}
+%\phantomsection
+\renewcommand{\indexname}{Index of Defined Terms}
+\addcontentsline{toc}{section}{Index of Defined Terms}
 {\twocolumn[]
 {\small\printindex}}
 

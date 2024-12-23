@@ -1,7 +1,7 @@
 # SynEpis
-Writings in LaTeX related to synthetic epistemology
+Philosophical Writings in LaTeX.
 
-Initially this is a "book" provisionally entitled "Synthetic Epistemology and Artificail Intelligence.
+A "monograph" provisionally entitled "An Epistemological Synthesis".
 
 
 

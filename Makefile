@@ -9,8 +9,10 @@ LUALATEXS=part1.tex notes.tex
 CONTEXTS=LogKb.tex
 TEXS=intro6.tex intro7.tex intro8.tex intro9.tex intro10.tex intro11.tex\
 	Varepis.tex LogicalTruth.tex \
+	edk01.tex \
 	kernel.tex kernel2.tex kernel3.tex kernel4.tex \
-	ftt01.tex
+	ftt01.tex \
+	carnap01.tex
 
 PAPPDFS=$(PAPDIRTEXS:.tex=.pdf) 
 LUAPDFS=$(LUALATEXS:.tex=.pdf) 

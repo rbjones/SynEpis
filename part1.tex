@@ -21,7 +21,16 @@
 
 \usepackage{endnotes}
 \makeatletter
-\def\enoteheading{\chapter{\notesname}}
+\renewcommand\enoteheading{\section*{\notesname}%
+    \@mkboth{\notesname}{\notesname}}
+
+\newcommand{\resetnotes}{%
+  \ifnum\value{endnote}>0%
+  \theendnotes%
+  \setcounter{endnote}{0}%
+  \else%
+  \fi%
+}
 \makeatother
 
 \newcommand{\ignore}[1]{}
@@ -78,44 +87,53 @@
 
 \input{intro10.tex}
 
+\resetnotes
+
 \chapter{Introduction}
 
 \input{intro11.tex}
 
-\theendnotes
-\setcounter{endnote}{0}
+\resetnotes
 
 \chapter{The Evolution of Declarative Knowledge}\label{EDK}
 
 \input{edk01.tex}
 
-\theendnotes\setcounter{endnote}{0}
+\resetnotes
 
 \chapter{A Philosophical Kernel 1}
 
 \input{kernel.tex}
 
+\resetnotes
+
 \chapter{A Philosophical Kernel 2}
 
 \input{kernel2.tex}
+
+\resetnotes
 
 \chapter{A Philosophical Kernel 3}
 
 \input{kernel3.tex}
 
+\resetnotes
+
 \chapter{A Philosophical Kernel 4}\label{PK}
 
 \input{kernel4.tex}
 
-\theendnotes
-\setcounter{endnote}{0}
+\section{Logical Truth}
+
+\input{LogTruth01.tex}
+
+\resetnotes
 
 \chapter{The Fundamental Triple Trichotomy}\label{FTT}
 
 \input{ftt01.tex}
 
-\theendnotes
-\setcounter{endnote}{0}
+\resetnotes
 
 \appendix
 
@@ -123,11 +141,10 @@
 
 \input{carnap01.tex}
 
-\theendnotes
-\setcounter{endnote}{0}
+\resetnotes
 
 %\let\cleardoublepage\clearpage
-\theendnotes
+%\theendnotes
 
 \listoftables
 %\listoffigures

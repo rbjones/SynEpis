@@ -1,0 +1,22 @@
+\documentclass[12pt,a4paper,twoside]{memoir}
+\usepackage{geometry}
+\geometry{a4paper, left=3cm, right=3cm, top=3cm, bottom=3cm} % Adjust as needed
+
+\usepackage{setspace}
+\setstretch{1.5} % 1.5 line spacing for text
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\thepage}
+\fancyhead[RO]{\thepage}
+\fancyhead[RE]{\nouppercase{\leftmark}}
+\fancyhead[LO]{\nouppercase{\rightmark}}
+
+\usepackage{fontspec} % If using XeLaTeX or LuaLaTeX
+\setmainfont{<Your Font Name>} % Specify a font
+
+\usepackage{microtype}
+
+\usepackage[notes,backend=biber]{biblatex-chicago}
+\addbibresource{rbj3.bib} % Your .bib file

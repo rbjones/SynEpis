@@ -7,7 +7,8 @@ PAPDIR=$(GITDIR)/www.rbjones.com/src/rbjpub/www/papers
 PAPDIRTEXS=p035.tex
 LUALATEXS=part1.tex notes.tex
 CONTEXTS=LogKb.tex
-TEXS=intro6.tex intro7.tex intro8.tex intro9.tex intro10.tex intro11.tex\
+TEXS=	introduction.tex intro2.tex intro3.tex intro4.tex intro5.tex \
+	intro6.tex intro7.tex intro8.tex intro9.tex intro10.tex intro11.tex\
 	Varepis.tex LogicalTruth.tex LogTruth01.tex \
 	edk01.tex \
 	kernel.tex kernel2.tex kernel3.tex kernel4.tex \

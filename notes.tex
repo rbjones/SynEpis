@@ -3,8 +3,35 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{hyperref}
+\usepackage{endnotes}
+\usepackage{fontspec}
+%\setmainfont{Linux Libertine O}
+\setmainfont{TeX Gyre Pagella}[Ligatures=TeX]
+\usepackage{unicode-math}
+\setmathfont{TeX Gyre Pagella Math}[Ligatures=TeX]
+\setmainfont{TeX Gyre Pagella}
+\newfontfamily\greekfont{GFS Didot}
+\newcommand{\ignore}[1]{}
+\newcommand{\rbjdeff}[1]{\textbf{\itshape{#1}}}
+\newcommand{\rbjdef}[1]{\rbjdeff{#1}\label{LABEL#1}\index{#1}}
+\newcommand{\rbjuse}[1]{\hyperref[LABEL#1]{\itshape{#1}}}
+\newcommand{\hreg}[2]{\href{#1}{#2}\footnote{\url{#1}}}
 
-\title{\LARGE\bf Chats with Bots}
+\newcommand{\resetnotes}{%
+  \ifnum\value{endnote}>0%
+  \theendnotes%
+  \setcounter{endnote}{0}%
+  \else%
+  \fi%
+}
+
+\newcommand{\chapnote}[1]{%
+  \chapter{#1}
+  \input{{#1}.tex}
+  \resetnotes
+  }
+
+\title{\LARGE\bf Archives and Notes}
 \author{}
 \date{}
 
@@ -15,6 +42,19 @@
 \setcounter{tocdepth}{2}
 {\parskip-0pt\tableofcontents}
 
+\part{Synthetic Epistemology}
+
+\chapnote{introduction}
+\chapnote{intro2}
+\chapnote{intro3}
+\chapnote{intro4}
+\chapnote{intro5}
+\chapnote{intro6}
+\chapnote{intro7}
+\chapnote{intro8}
+\chapnote{intro9}
+\chapnote{intro10}
+\chapnote{intro11}
 
 \part{ChatGPT}
 

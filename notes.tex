@@ -1,21 +1,47 @@
 % $Id: notes.tex $
-\documentclass{book}
+\documentclass[12pt,titlepage]{book}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{booktabs}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{hyperref}
-\usepackage{endnotes}
-\usepackage{fontspec}
-%\setmainfont{Linux Libertine O}
-\setmainfont{TeX Gyre Pagella}[Ligatures=TeX]
 \usepackage{unicode-math}
+\usepackage[unicode]{hyperref}
+\usepackage{endnotes}
+
+\usepackage{paralist}
+\usepackage{relsize}
+\usepackage{verbatim}
+\usepackage{enumerate}
+\usepackage{longtable}
+\usepackage{url}
+
+\usepackage{fontspec}
+
+%\setmainfont{Linux Libertine O}
+
+% Greek Characters
+
+\setmainfont{TeX Gyre Pagella}[Ligatures=TeX]
 \setmathfont{TeX Gyre Pagella Math}[Ligatures=TeX]
-\setmainfont{TeX Gyre Pagella}
+%\setmainfont{TeX Gyre Pagella}
 \newfontfamily\greekfont{GFS Didot}
+
+\usepackage[paperwidth=5.25in,paperheight=8in,hmargin={0.75in,0.5in},vmargin={0.5in,0.5in},includehead,includefoot]{geometry}
+\hypersetup{pdfauthor={Roger Bishop Jones}}
+\hypersetup{pdftitle={Oracular AI v2}}
+\hypersetup{colorlinks=true, urlcolor=red, citecolor=blue, filecolor=blue, linkcolor=blue}
+\renewcommand{\thefootnote}{\roman{footnote}}
+
 \newcommand{\ignore}[1]{}
 \newcommand{\rbjdeff}[1]{\textbf{\itshape{#1}}}
 \newcommand{\rbjdef}[1]{\rbjdeff{#1}\label{LABEL#1}\index{#1}}
 \newcommand{\rbjuse}[1]{\hyperref[LABEL#1]{\itshape{#1}}}
 \newcommand{\hreg}[2]{\href{#1}{#2}\footnote{\url{#1}}}
+
+\makeatletter
+\renewcommand\enoteheading{\section*{\notesname}%
+    \@mkboth{\notesname}{\notesname}}
 
 \newcommand{\resetnotes}{%
   \ifnum\value{endnote}>0%
@@ -29,7 +55,12 @@
   \chapter{#1}
   \input{{#1}.tex}
   \resetnotes
-  }
+}
+
+\makeatother
+
+\pagestyle{plain}
+\makeindex
 
 \title{\LARGE\bf Archives and Notes}
 \author{}

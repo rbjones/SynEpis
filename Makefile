@@ -5,13 +5,13 @@ SRCDIR=$(GITDIR)/SynEpis
 PAPDIR=$(GITDIR)/www.rbjones.com/src/rbjpub/www/papers
 
 PAPDIRTEXS=p035.tex
-LUALATEXS=part1.tex notes.tex
+LUALATEXS=part1.tex notes.tex arch.tex
 CONTEXTS=LogKb.tex
 TEXS=	introduction.tex intro2.tex intro3.tex intro4.tex intro5.tex \
 	intro6.tex intro7.tex intro8.tex intro9.tex intro10.tex intro11.tex\
 	Varepis.tex LogicalTruth.tex LogTruth01.tex \
-	edk01.tex \
-	kernel.tex kernel2.tex kernel3.tex kernel4.tex \
+	edk01.tex edk02.tex \
+	kernel.tex kernel2.tex kernel3.tex kernel4.tex kernel5.tex \
 	ftt01.tex \
 	carnap01.tex
 

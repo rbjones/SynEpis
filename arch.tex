@@ -1,5 +1,5 @@
-% $Id: part1.tex $ #
-\documentclass[10pt,titlepage]{book}
+% $Id: notes.tex $
+\documentclass[12pt,titlepage]{book}
 \usepackage{makeidx}
 \usepackage{graphicx}
 \usepackage{booktabs}
@@ -18,6 +18,8 @@
 
 \usepackage{fontspec}
 
+%\setmainfont{Linux Libertine O}
+
 % Greek Characters
 
 \setmainfont{TeX Gyre Pagella}[Ligatures=TeX]
@@ -27,9 +29,8 @@
 
 \usepackage[paperwidth=5.25in,paperheight=8in,hmargin={0.75in,0.5in},vmargin={0.5in,0.5in},includehead,includefoot]{geometry}
 \hypersetup{pdfauthor={Roger Bishop Jones}}
-\hypersetup{pdftitle={Oracular AI v2}}
+\hypersetup{pdftitle={Archives}}
 \hypersetup{colorlinks=true, urlcolor=red, citecolor=blue, filecolor=blue, linkcolor=blue}
-%\usepackage{html}
 \renewcommand{\thefootnote}{\roman{footnote}}
 
 \newcommand{\ignore}[1]{}
@@ -61,90 +62,43 @@
 \pagestyle{plain}
 \makeindex
 
-\title{\bf\LARGE An Epistemological Synthesis}
-\author{Roger~Bishop~Jones}
-\date{\small 2024-09-22}
-
+\title{\LARGE\bf Archives}
+\author{}
+\date{}
 
 \begin{document}
-%\frontmatter
 
-%\begin{abstract}
-% Presentation of the most fundamental aspects of a positivist philosophical system articulated around a position on knowledge representation.
-%
-%\end{abstract}
-                               
-\begin{titlepage}
 \maketitle
-
-%\vfill
-
-%\begin{centering}
-
-%{\footnotesize
-%copyright\ Roger~Bishop~Jones;
-%}%footnotesize
-
-%\end{centering}
-
-\end{titlepage}
-
-\ \
-
-\ignore{
-\begin{centering}
-{}
-\end{centering}
-}%ignore
 
 \setcounter{tocdepth}{2}
 {\parskip-0pt\tableofcontents}
 
-%\mainmatter
+\part{Synthetic Epistemology}
 
-\chapter{Introduction}
+\chapnote{introduction}
+\chapnote{intro2}
+\chapnote{intro3}
+\chapnote{intro4}
+\chapnote{intro5}
+\chapnote{intro6}
+\chapnote{intro7}
+\chapnote{intro8}
+\chapnote{intro9}
+\chapnote{intro10}
+\chapnote{intro11}
+\chapnote{edk01}
+\chapnote{edk02}
+\chapnote{kernel}
+\chapnote{kernel2}
+\chapnote{kernel3}
+\input{kernel4.tex}\section{Logical Truth}\input{LogTruth01.tex}\resetnotes
+\chapnote{kernel5}
 
-\input{intro10.tex}
 
-\resetnotes
+\chapnote{ftt01}
 
-%\chapter{Introduction}
-%\input{intro11.tex}
-%\resetnotes
-
-\chapter{The Evolution of Declarative Knowledge}\label{EDK}
-
-\input{edk02.tex}
-\resetnotes
-
-\ignore{
-\chapter{A Philosophical Kernel 2}
-
-\input{kernel2.tex}
-\resetnotes
-
-\chapter{A Philosophical Kernel 3}
-
-\input{kernel3.tex}
-\resetnotes
-}%ignore
-
-\chapter{A Philosophical Kernel}\label{PK}
-
-\input{kernel5.tex}
-\resetnotes
-
-\chapter{The Fundamental Triple Trichotomy}\label{FTT}
-
-\input{ftt01.tex}
-\resetnotes
-
-\appendix
-
-\chapter{The Philosophy of Rudolf Carnap}\label{PRC}
-
-\input{carnap01.tex}
-\resetnotes
+%\chapnote{}
+%\chapnote{}
 
 \listoftables
 %\listoffigures
@@ -166,7 +120,4 @@
 %Started 2024-10-19
 %}%tiny
 
-
 \end{document}
-
-% LocalWords:

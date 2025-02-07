@@ -1,22 +1,30 @@
-
 This philosophical kernal is devoted to a conception of \emph{logical truth}.
 First to its definition, and then to the idea that there could be a practically universal foundation for that notion of logical truth.
 
-By `foundation' in this context I mean, a logical system to which all logical truth is reducible, both in terms of semantics and proof theory, i.e. in defining which propositions are true and in determining conclusively which propositions satisfy the definition.
+By `foundation' in this context I mean, a logical system to which all logical truth is reducible, both in terms of semantics and proof theory, i.e. in defining precise truth conditions for sentences and hence which propositions are true and in determining conclusively which propositions satisfy the definition.
 
 Such a foundation for logical truth also provides, I shall argue later, a foundation for all other declarative language, by providing precise abstract semantics for such languages as a starting point for more concrete meanings.
-Suxh an abstract senantucs determining the logical truths in the concrete language and  the relationship of entailment between collections of sentences of the language, and determines principles of sound deduction in the language.
-
-Its does this by providing for the articulation of an abstract semantics even for more concrete declarative languages.
+An abstract semantics, determines the logical truths expressible in the language, the relationship of entailment between collections of sentences of the language, and hence the principles of sound deduction in the language.
 From such an abstract semantics, a concrete meaning may be advanced by describing the intended correspondence between concrete entities and abstractions which represent them in the abstract semantics.
 
-This chapter is concerned with the philosophical aspects of these matters, covering methodological considerations and yielding definitions of core concepts such as \rbjuse{logical truth}, and of the idea of a practically universal foundation for logical truth.
+This chapter is concerned with the philosophical aspects of these matters, covering methodological considerations and yielding definitions of core concepts such as \rbjuse{logical truth}, and of the idea of a practically universal foundation for abstract semantics and logical truth.
 
 In subsequent chapters there will be more definite descriptions of a preferred practically universal system, and discussions of how empirical knowledge and all other kinds of knowledge in which meanings are sufficiently definite to support deductive reasoning can be built upon the proposed logical foundation.
 
+While talking of `universal' foundations and of the precision of semantics and certainty of proof, I will often qualify claims with `practically', and even where this qualification is elided, it should be understood that absolute claims are not intended.
+There is no intent to deny the well established technical results which limit semantic definitions and formal deductive systems.
+One of the principal means for achieving practical universality is by talking of families of languages of increasing expressiveness indexed by cardinality of standard interpretations.
+To talk about universality it is necessary moreover to give a definite description of the class of systems among which universality is claimed, and of the kind of reduction which is admitted to putatively universal members of the class.
+
+Such definitions inevitably invove specific choices of language, and in that way may fail to yield convincingly absolute universals.
+It is intended that the specific presentations in relation to which universality is claimed are primarily constraints on the presentation of the systems rather than eliminating important systems which might otherwise serve as counterexamples to the hypothesis of universality.
+
+The monograph is philosophical, and most of the metatheoretic claims made, even though they address formal systems which are intended for exact proofs, are hypotheses rather than established results, and despite my efforts to make these hypothesis exact, they may be inherently philosophical rather than technical in character.
+
+
 \section{Methodological Prelimaries}
 
-Perhaps the best known example of this genre is found in Descartes' Meditations on First Philosophy \cite{descartes2013meditations}, and so I should mention some of most important ways in which my methods differ from those of Descartes.
+Perhaps the best known example of this genre is found in Descartes' \emph{Meditations on First Philosophy} \cite{descartes2013meditations}, and so I should mention some of most important ways in which my methods differ from those of Descartes.
 
 Descartes' method begins with systematic doubt encompassing everything which can be doubted, finding at first only one thing beyond doubt, his \emph{cogito} the inference from doubting to existence.
 Building on this slender base he constructs his entire philosophy, ultimately claiming that the results of his inferences from clear and distinct ideas are indubitable.
@@ -33,7 +41,8 @@ Thr foundational ideas proposed are not arrived at by systematic doubt, but afte
 So, no blank slate.
 
 Beyond the philosophical perspective specific technical proposals are made for the representation of knowledge.
-The foundational role of the kernel is to provide a context in which the rationale for and the key propoerties of this technical proposal can be understood.
+The foundational role of this philospphical kernel is to provide a context in which the rationale for and the key propoerties of this technical proposal can be understood.
+The formal logical foundation systems which are discussed are themselves built from a logical kernel, which is a formal language with defined syntax and semantics.
 
 The terminology used in describing this kernel will fall into three 
 groups.

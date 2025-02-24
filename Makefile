@@ -4,6 +4,7 @@ GITDIR=~/git
 SRCDIR=$(GITDIR)/SynEpis
 PAPDIR=$(GITDIR)/www.rbjones.com/src/rbjpub/www/papers
 
+TXTS=grok3in.txt
 PAPDIRTEXS=p035.tex
 LUALATEXS=part1.tex notes.tex arch.tex
 CONTEXTS=LogKb.tex
@@ -21,7 +22,7 @@ CONTEXTPDFS=$(CONTEXTS:.tex=.pdf)
 
 BIBFILES=rbj3.bib rbjfmu.bst
 
-SRCDIRCPY=$(TEXS) $(LUALATEXS) $(CONTEXTS) $(BIBFILES) Makefile
+SRCDIRCPY=$(TEXS) $(LUALATEXS) $(CONTEXTS) $(BIBFILES) $(TXTS) Makefile
 PAPDIRCPY=$(PAPDIRTEXS)
 
 all: $(LUAPDFS)
@@ -44,6 +45,8 @@ $(LUAPDFS): %.pdf: %.tex $(TEXS) $(BIBFILES) Makefile
 	bibtex $*
 	makeindex $*
 	lualatex $<
+
+part1.pdf: grok3in.txt
 
 $(CONTEXTPDFS): %.pdf: %.tex $(TEXS) $(BIBFILES) Makefile
 	context $<

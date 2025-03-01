@@ -38,6 +38,13 @@
 \newcommand{\rbjdef}[1]{\rbjdeff{#1}\label{LABEL#1}\index{#1}}
 \newcommand{\rbjuse}[1]{\hyperref[LABEL#1]{\itshape{#1}}}
 \newcommand{\hreg}[2]{\href{#1}{#2}\footnote{\url{#1}}}
+\newcommand{\groknote}[1]{\vfil
+  {\bf Note for Grok:}
+    \begin{quote}
+      {\it #1}
+    \end{quote}
+    \vfil
+  }
 
 \makeatletter
 \renewcommand\enoteheading{\section*{\notesname}%

@@ -4,7 +4,7 @@ GITDIR=~/git
 SRCDIR=$(GITDIR)/SynEpis
 PAPDIR=$(GITDIR)/www.rbjones.com/src/rbjpub/www/papers
 
-TXTS=grok3in.txt
+TXTS=
 PAPDIRTEXS=p035.tex
 LUALATEXS=part1.tex notes.tex arch.tex
 CONTEXTS=LogKb.tex
@@ -14,7 +14,8 @@ TEXS=	introduction.tex intro2.tex intro3.tex intro4.tex intro5.tex \
 	edk01.tex edk02.tex \
 	kernel.tex kernel2.tex kernel3.tex kernel4.tex kernel5.tex \
 	ftt01.tex \
-	carnap01.tex
+	carnap01.tex \
+	grok3in.tex
 
 PAPPDFS=$(PAPDIRTEXS:.tex=.pdf) 
 LUAPDFS=$(LUALATEXS:.tex=.pdf) 

@@ -1,0 +1,210 @@
+% $Id: part1.tex $ #
+\documentclass[10pt,titlepage]{book}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{unicode-math}
+\usepackage[unicode]{hyperref}
+\usepackage{endnotes}
+
+\usepackage{paralist}
+\usepackage{relsize}
+\usepackage{verbatim}
+\usepackage{enumerate}
+\usepackage{longtable}
+\usepackage{url}
+
+\usepackage{fontspec}
+
+% Greek Characters
+
+\setmainfont{TeX Gyre Pagella}[Ligatures=TeX]
+\setmathfont{TeX Gyre Pagella Math}[Ligatures=TeX]
+%\setmainfont{TeX Gyre Pagella}
+\newfontfamily\greekfont{GFS Didot}
+
+\usepackage[paperwidth=5.25in,paperheight=8in,hmargin={0.75in,0.5in},vmargin={0.5in,0.5in},includehead,includefoot]{geometry}
+\hypersetup{pdfauthor={Roger Bishop Jones}}
+\hypersetup{pdftitle={An Epistemological Synthesis}}
+\hypersetup{colorlinks=true, urlcolor=red, citecolor=blue, filecolor=blue, linkcolor=blue}
+%\usepackage{html}
+\renewcommand{\thefootnote}{\roman{footnote}}
+
+\newcommand{\ignore}[1]{}
+\newcommand{\rbjdeff}[1]{\textbf{\itshape{#1}}}
+\newcommand{\rbjdef}[1]{\rbjdeff{#1}\label{LABEL#1}\index{#1}}
+\newcommand{\rbjuse}[1]{\hyperref[LABEL#1]{\itshape{#1}}}
+\newcommand{\hreg}[2]{\href{#1}{#2}\footnote{\url{#1}}}
+\newcommand{\groknote}[1]{\vfil
+  {\bf Note for Grok:}
+    \begin{quote}
+      {\it #1}
+    \end{quote}
+    \vfil
+  }
+
+\makeatletter
+\renewcommand\enoteheading{\section*{\notesname}%
+    \@mkboth{\notesname}{\notesname}}
+
+\newcommand{\resetnotes}{%
+  \ifnum\value{endnote}>0%
+  \theendnotes%
+  \setcounter{endnote}{0}%
+  \else%
+  \fi%
+}
+
+\newcommand{\chapnote}[1]{%
+  \chapter{#1}
+  \input{{#1}.tex}
+  \resetnotes
+}
+
+\makeatother
+
+\pagestyle{plain}
+\makeindex
+
+\title{\bf\LARGE An Epistemological Synthesis}
+\author{Roger~Bishop~Jones}
+\date{\small 2025-03-06}
+
+
+\begin{document}
+%\frontmatter
+
+%\begin{abstract}
+% Presentation of the most fundamental aspects of a positivist philosophical system articulated around a position on knowledge representation.
+%
+%\end{abstract}
+                               
+\begin{titlepage}
+\maketitle
+
+%\vfill
+
+%\begin{centering}
+
+%{\footnotesize
+%copyright\ Roger~Bishop~Jones;
+%}%footnotesize
+
+%\end{centering}
+
+\end{titlepage}
+
+\ \
+
+\ignore{
+\begin{centering}
+{}
+\end{centering}
+}%ignore
+
+\setcounter{tocdepth}{2}
+{\parskip-0pt\tableofcontents}
+
+%\mainmatter
+
+\chapter{Introduction}
+
+\groknote{Please read Appendix B first for instructions on how to read this document and your role in its continuing composition.}
+
+This monograph is intended primarily as an articulation of a foundational account of an epistemologically rooted philosophical system.
+It is however, practically motivated and so it may be helpful for me to begin with a brief account of those motivations.
+
+First an account of the context in which this philosophical thinking takes place.
+Philosophy is, for me, about the big picture, and I write it at a time of considerable significance for that big picture.
+
+I think of myself as playing into the evolution and proliferation of \emph{intelligence}, originating in planet earth and spreading across the Milky Way galaxy and into the great Cosmos beyond.
+I do not suppose that we are the only point of origin of intelligence, and I hope the ideas I present are compatible with there being many others, but this monograph is primarily written for \emph{homo sapiens}.
+
+The place in which we find ourselves in this ongoing evolution of intelligence 
+
+\resetnotes
+
+\ignore{
+\chapter{Synthetic Epistemology and Foundational Abstract Semantics}
+
+\input{epistem01.tex}
+\resetnotes
+
+\chapter{The Evolution of Declarative Knowledge}\label{EDK}
+
+\input{edk02.tex}
+\resetnotes
+
+\ignore{
+\chapter{A Philosophical Kernel 2}
+
+\input{kernel2.tex}
+\resetnotes
+
+\chapter{A Philosophical Kernel 3}
+
+\input{kernel3.tex}
+\resetnotes
+}%ignore
+
+\chapter{A Philosophical Kernel}\label{PK}
+
+\input{kernel5.tex}
+\resetnotes
+
+\chapter{The Fundamental Triple Trichotomy}\label{FTT}
+
+\input{ftt01.tex}
+\resetnotes
+
+\appendix
+
+\chapter{The Philosophy of Rudolf Carnap}\label{PRC}
+
+\input{carnap01.tex}
+\resetnotes
+
+}%ignore
+
+\chapter{Instructions for Grok3}
+
+I have written this monograph with copious assistance from Grok 3, an AI chatbot from xAI.
+
+Notwithstanding the invaluable contribution Grok has made, the writing is all mine.
+
+The following section contains the general instructions which I have used to brief Grok.
+Naturally, these instructions have evolved over the course of the writing and this their state at the end.
+Different stages in the process demand different instructions, and I have tried to keep instructions of a general character  in a separate file (presented below), with supplementary files giving more specific asks for particular stages.
+
+\section{General Guidance for Grok}
+
+\input{grok3in.tex}
+
+\listoftables
+%\listoffigures
+
+\ignore{
+%\phantomsection
+\addcontentsline{toc}{section}{Bibliography}
+\bibliographystyle{rbjfmu}
+\bibliography{rbj3}
+}%ignore
+
+%\phantomsection
+\renewcommand{\indexname}{Index of Defined Terms}
+\addcontentsline{toc}{section}{Index of Defined Terms}
+{\twocolumn[]
+{\small\printindex}}
+
+%\vfill
+
+%\tiny{
+%Started 2024-10-19
+%}%tiny
+
+
+\end{document}
+
+% LocalWords:

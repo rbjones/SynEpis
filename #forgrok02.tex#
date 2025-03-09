@@ -114,37 +114,46 @@
 
 \chapter{Introduction}
 
-\emph{Epistemology} is the name used by philosophers for \emph{the theory of knowledge}.
-More scientifically oriented studies, or cross disciplinary collaborations may be presented as \emph{cognitive science}.
+We stand, as I write, on the brink of achieving ``artificial intelligence'', with conversational intelligent systems exhibiting superhuman breadth of knowledge and command of language, but even less than human ability to separate truth from falsehood.
+The limitations stem in part from the core objectives, essentially to replicate and then surpass human intelligence, achieving this by indiscriminate consumption of very large volumes of data from diverse sources.
 
-Philosophical approaches to epistmology generally regard knowledge as an established phenomenon, to be observed an analysed, or possibly an area in which articulating or prescribing an ideal might be appropriate.
-Plato's conception of knowledge as ``justfied true belief'' is an early and influential example.
+Insofar as efforts have been made to impose standards on how these AIs work, it has been directed at `safety', without there being any clear conception of what that means, beyond avoiding catastropic outomes.
+Without much sign of progress on any reasonable metric of safety, the effect seems primarily to be one of alignment with the political leanings of their creators.
 
-Computer science has now reached the point at which the engineering of \emph{intelligent} systems is advancing.
-This has largely been achieve by emulating the mechanisms which are credited with effecting intelligence in humans, and the results of this are now coming close to replicating the kinds of intelligence found in \emph{homo sapiens}.
-One test, proposed by Alan Turing more than half a century ago, seems now to have been met.
-Insofar as one can now tell whether a chat interface is operated by natural or synthetic intelligence, it now rests primarily on matters other than intelligence.
-So, for example, it is easy to tell a chatbot, because often they will respond immediately and at length, in a way which would be physically impossible for a human even if he had that miuch mental agility.
+One company has prioritised `truth' rather than safety, but it is doubtful how they can achieve that objective when the human discourse on which AIs are trained exhibits a diversity of opinion, and fluidity of language which defies determination of truth or realisation of consistency.
 
-However, though they in many cases will outperform humans, in certain aspects which one might think important, they do not.
-At this moment, there has been considerable concen over the safety of these AIs, with some lack of clarity about what that means, there is only one major player who has prioritised truth telling, and little prospect of them in fact achieving their objectives.
-The dominant paradigm is to train the AIs on very large quantities sof data drawn from diverse sources.
-Consequently, they are not trained with any consistent world view, let alone with any way to tell the difference between consistent and true.
+A much more ancient point at which `truth' has been emphasised is in Plato's analysis of the concept of knowledge, which he glossed as ``justified true belief''.
+That was perhaps the beginning of the branch of philosophy which has more recently become known as \emph{epistemology}, the theory of knowledge.
 
+Can we look to epistemology to discover how AIs which are truthful might be achieved?
+This monograph is intended to contribute philosophical ideas about knowledge which might possibly enable AIs to escape or moderate the human susceptiblity to equivocation, falsity and incoherence.
+The transformation of purpose when we seek from epistemology philosophical underpinnings to enable rigour in superhuman synthetic intelligence is so great that the methods are likely to be unfamiliar and to represent a distinctive approach to epistemology.
+I use ``synthetic epistomology'' to refer to the construction of epistemological theories of knowledge engineered to underpin some more practical purpose, and thence to title this monograph ``An Epistemological Synthesis''.
 
+To expose the rational basis for the proposal which will eventually be detailed, it will be useful to provide some historical background.
+First, in relation to the significance of deduction to the representation of knowledge, we note two major phases in the cultural evolution which has brought us to our present technological competence.
+An ability to perform elementary deductive reasoning integral to an undestanding of language, since that involves knowledge of basic conceptual inclusions, such as that horses are animals, which justifies the inference from there is a horse in the field to there is an animal in the field.
 
+Elaborate chains of deductive reasoning are something else, and we only see this happening explicitly in the last three thousand years since the ancient Greeks abstracted from the arithmetic and geometric techniques of their predecessors into axiomatic mathematical theories.
+This established a domain and a method which supported extended deductive reasoning for the first time, but outside those narrow confines deductive reasoning proved much less conclusive, giving philosophers motivation to extend the domain of effectiveness into their more abstruse subject matters.
 
-There are many approaches to epistemology, which for present purposes may be classified as:
+Over the next three thousand years two important milestones underlined the strength of that motivation.
+The first was Aristotle's Organon, the works on logic which articulated his conception of demonstrative science, the second was the birth of modern science, 
+
+Here's the progression I anticipate:
 \begin{itemize}
-\item Analytic
-  In which linguistic or logical analysis is used to make clear the meaning of the relevant concepts (such as `know') to obtain theoretical understanding.
-\item Descriptive or Naturalistic
-  In which observation of the relevant practice rather than analysis of the language is the 
-\item Prescriptive
-\item Synthetic
-  \end{itemize}
-  
+\item Complete the description of demonstrative science and modern hypothetico deductive and nomologico-deductive science.
+\item Talk about Isaiah Berlin's account of the three legs upon which the western tradition rests, connecting this to the necessary conditions for the accumulation of large bodies of deductively applicable knowledge.
+\item Note the dountful position of empirical and evaluative knowledge in relation to those ideals
+\item Talk about the interpretation of science as providing abstract models rather than factual generalisations.
+\item Sketch the later history leading to Frege's foundations for mathematics, the role of logical kernel's in that process and the dilemma between the idea o a single foundation, the apparent need for linguistic pluralism (partly driven by Carnap's attempt to extend the foundational method beyond mathematics into science).
+\item Say something about the evolution of those mathematical foundations through Russell and Church to Gordon's HOL and its application to hardware verification.
 
+\item Talk about the abstraction from Gordon's HOL which is the epicenter of the synthesis.
+\item Enumerate the main claims supporting the relevance of this abstract foundation system to the development of appropriate knowedge repositories.
+\item Enumerate the philosophical problems involved in justifying the claims and indicate the manner in which those problems will be addressed.
+\item Sketch the how rest of the monograph chapter by chapter addresses those problems.
+\end{itemize}
 
 \cite{couturat1901logique}
 

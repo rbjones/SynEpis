@@ -1,0 +1,230 @@
+% $Id: part1.tex $ #
+\documentclass[10pt,titlepage]{book}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{unicode-math}
+\usepackage[unicode]{hyperref}
+\usepackage{endnotes}
+
+\usepackage{paralist}
+\usepackage{relsize}
+\usepackage{verbatim}
+\usepackage{enumerate}
+\usepackage{longtable}
+\usepackage{url}
+
+\usepackage{fontspec}
+
+% Greek Characters
+
+\setmainfont{TeX Gyre Pagella}[Ligatures=TeX]
+\setmathfont{TeX Gyre Pagella Math}[Ligatures=TeX]
+%\setmainfont{TeX Gyre Pagella}
+\newfontfamily\greekfont{GFS Didot}
+
+\usepackage[paperwidth=5.25in,paperheight=8in,hmargin={0.75in,0.5in},vmargin={0.5in,0.5in},includehead,includefoot]{geometry}
+\hypersetup{pdfauthor={Roger Bishop Jones}}
+\hypersetup{pdftitle={An Epistemological Synthesis}}
+\hypersetup{colorlinks=true, urlcolor=red, citecolor=blue, filecolor=blue, linkcolor=blue}
+%\usepackage{html}
+\renewcommand{\thefootnote}{\roman{footnote}}
+
+\newcommand{\ignore}[1]{}
+\newcommand{\rbjdeff}[1]{\textbf{\itshape{#1}}}
+\newcommand{\rbjdef}[1]{\rbjdeff{#1}\label{LABEL#1}\index{#1}}
+\newcommand{\rbjuse}[1]{\hyperref[LABEL#1]{\itshape{#1}}}
+\newcommand{\hreg}[2]{\href{#1}{#2}\footnote{\url{#1}}}
+\newcommand{\groknote}[1]{\vfil
+  {\bf Note for Grok:}
+    \begin{quote}
+      {\it #1}
+    \end{quote}
+    \vfil
+  }
+
+\makeatletter
+\renewcommand\enoteheading{\section*{\notesname}%
+    \@mkboth{\notesname}{\notesname}}
+
+\newcommand{\resetnotes}{%
+  \ifnum\value{endnote}>0%
+  \theendnotes%
+  \setcounter{endnote}{0}%
+  \else%
+  \fi%
+}
+
+\newcommand{\chapnote}[1]{%
+  \chapter{#1}
+  \input{{#1}.tex}
+  \resetnotes
+}
+
+\makeatother
+
+\pagestyle{plain}
+\makeindex
+
+\title{\bf\LARGE An Epistemological Synthesis}
+\author{Roger~Bishop~Jones}
+\date{\small 2025-03-06}
+
+
+\begin{document}
+%\frontmatter
+
+%\begin{abstract}
+% Presentation of the most fundamental aspects of a positivist philosophical system articulated around a position on knowledge representation.
+%
+%\end{abstract}
+                               
+\begin{titlepage}
+\maketitle
+
+%\vfill
+
+%\begin{centering}
+
+%{\footnotesize
+%copyright\ Roger~Bishop~Jones;
+%}%footnotesize
+
+%\end{centering}
+
+\end{titlepage}
+
+\ \
+
+\ignore{
+\begin{centering}
+{}
+\end{centering}
+}%ignore
+
+\setcounter{tocdepth}{2}
+{\parskip-0pt\tableofcontents}
+
+%\mainmatter
+
+
+\groknote{Please read appendix \ref{InstructionsForGrok} first for instructions on how to read this document and your role in its continuing composition.}
+
+\chapter{Introduction}
+
+\emph{Epistemology} is the name used by philosophers for \emph{the theory of knowledge}.
+More scientifically oriented studies, or cross disciplinary collaborations may be presented as \emph{cognitive science}.
+
+Philosophical approaches to epistmology generally regard knowledge as an established phenomenon, to be observed an analysed, or possibly an area in which articulating or prescribing an ideal might be appropriate.
+Plato's conception of knowledge as ``justfied true belief'' is an early and influential example.
+
+Computer science has now reached the point at which the engineering of \emph{intelligent} systems is advancing.
+This has largely been achieve by emulating the mechanisms which are credited with effecting intelligence in humans, and the results of this are now coming close to replicating the kinds of intelligence found in \emph{homo sapiens}.
+One test, proposed by Alan Turing more than half a century ago, seems now to have been met.
+Insofar as one can now tell whether a chat interface is operated by natural or synthetic intelligence, it now rests primarily on matters other than intelligence.
+So, for example, it is easy to tell a chatbot, because often they will respond immediately and at length, in a way which would be physically impossible for a human even if he had that miuch mental agility.
+
+However, though they in many cases will outperform humans, in certain aspects which one might think important, they do not.
+At this moment, there has been considerable concen over the safety of these AIs, with some lack of clarity about what that means, there is only one major player who has prioritised truth telling, and little prospect of them in fact achieving their objectives.
+The dominant paradigm is to train the AIs on very large quantities sof data drawn from diverse sources.
+Consequently, they are not trained with any consistent world view, let alone with any way to tell the difference between consistent and true.
+
+
+
+
+There are many approaches to epistemology, which for present purposes may be classified as:
+\begin{itemize}
+\item Analytic
+  In which linguistic or logical analysis is used to make clear the meaning of the relevant concepts (such as `know') to obtain theoretical understanding.
+\item Descriptive or Naturalistic
+  In which observation of the relevant practice rather than analysis of the language is the 
+\item Prescriptive
+\item Synthetic
+  \end{itemize}
+  
+
+
+\cite{couturat1901logique}
+
+
+\resetnotes
+
+\chapter{A Philosophical Kernel}\label{PK}
+
+%\input{kernel5.tex}
+\resetnotes
+
+\chapter{Evolution}
+
+\cite{donald1991,murray2017evolution}
+
+\ignore{
+\chapter{Synthetic Epistemology and Foundational Abstract Semantics}
+
+\input{epistem01.tex}
+\resetnotes
+
+\chapter{The Evolution of Declarative Knowledge}\label{EDK}
+
+%\input{edk02.tex}
+\resetnotes
+
+
+\chapter{The Fundamental Triple Trichotomy}\label{FTT}
+
+%\input{ftt01.tex}
+\resetnotes
+}%ignore
+
+\appendix
+
+\ignore{
+\chapter{The Philosophy of Rudolf Carnap}\label{PRC}
+
+\input{carnap01.tex}
+\resetnotes
+
+}%ignore
+
+\appendix
+
+\chapter{Instructions for Grok3}\label{InstructionsForGrok}
+
+I have written this monograph with copious assistance from Grok 3, an AI chatbot from xAI.
+
+Notwithstanding the invaluable contribution Grok has made, the writing is all mine.
+
+The following section contains the general instructions which I have used to brief Grok.
+Naturally, these instructions have evolved over the course of the writing and this their state at the end.
+Different stages in the process demand different instructions, and I have tried to keep instructions of a general character  in a separate file (presented below), with supplementary files giving more specific asks for particular stages.
+
+\section{General Guidance for Grok}
+
+\input{grok3in.tex}
+
+\listoftables
+%\listoffigures
+
+%\phantomsection
+\addcontentsline{toc}{section}{Bibliography}
+\bibliographystyle{rbjfmu}
+\bibliography{rbj3}
+
+%\phantomsection
+\renewcommand{\indexname}{Index of Defined Terms}
+\addcontentsline{toc}{section}{Index of Defined Terms}
+{\twocolumn[]
+{\small\printindex}}
+
+%\vfill
+
+%\tiny{
+%Started 2024-10-19
+%}%tiny
+
+
+\end{document}
+
+% LocalWords:

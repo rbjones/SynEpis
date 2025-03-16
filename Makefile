@@ -9,7 +9,7 @@ PAPDIRTEXS=p035.tex
 LUALATEXS=part1.tex notes.tex arch.tex forgrok02.tex
 CONTEXTS=LogKb.tex
 TEXS=	introduction.tex intro2.tex intro3.tex intro4.tex intro5.tex \
-	intro6.tex intro7.tex intro8.tex intro9.tex intro10.tex intro11.tex intro12.tex\
+	intro6.tex intro7.tex intro8.tex intro9.tex intro10.tex intro11.tex intro12.tex intro13.tex\
 	Varepis.tex LogicalTruth.tex LogTruth01.tex \
 	epistem01.tex \
 	edk01.tex edk02.tex \

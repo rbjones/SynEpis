@@ -1,6 +1,6 @@
 # Makefile 2024-06-13
 
-GITDIR=~/git
+GITDIR=../
 SRCDIR=$(GITDIR)/SynEpis
 PAPDIR=$(GITDIR)/www.rbjones.com/src/rbjpub/www/papers
 
@@ -33,7 +33,7 @@ all: $(LUAPDFS)
 	bibtex %.tex
 
 bdir:
-	@-mkdir $(GITDIR)/SynEpisBuild
+	@mkdir $(GITDIR)/SynEpisBuild
 	cp Makefile $(GITDIR)/SynEpisBuild
 
 $(PAPPDFS): %.pdf: %.tex $(BIBFILES) Makefile
@@ -47,8 +47,6 @@ $(LUAPDFS): %.pdf: %.tex $(TEXS) $(BIBFILES) Makefile
 	bibtex $*
 	makeindex $*
 	lualatex $<
-
-part1.pdf: grok3in.txt
 
 $(CONTEXTPDFS): %.pdf: %.tex $(TEXS) $(BIBFILES) Makefile
 	context $<

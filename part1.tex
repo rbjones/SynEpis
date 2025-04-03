@@ -15,6 +15,7 @@
 \usepackage{enumerate}
 \usepackage{longtable}
 \usepackage{url}
+\usepackage{markdown}
 
 \usepackage{fontspec}
 
@@ -38,7 +39,7 @@
 \newcommand{\rbjuse}[1]{\hyperref[LABEL#1]{\itshape{#1}}}
 \newcommand{\hreg}[2]{\href{#1}{#2}\footnote{\url{#1}}}
 \newcommand{\groknote}[1]{\vfil
-  {\bf Note for Grok:}
+  {\bf Note for AI Contributors:}
     \begin{quote}
       {\it #1}
     \end{quote}
@@ -111,8 +112,13 @@
 
 \chapter{Introduction}
 
-\groknote{Please read Appendix \ref{InstructionsForGrok} first for instructions on how to read this document and your role in its continuing composition.}
+\groknote{Please read Appendix \ref{InstructionsForAIContributors} first for instructions on how to read this document and your role in its continuing composition.}
 \input{intro14.tex}
+
+\chapter{Logical Universalism and Pluralism}
+
+\input{unilog01.tex}
+
 \resetnotes
 
 \ignore{
@@ -156,7 +162,9 @@
 \resetnotes
 }%ignore
 
-\chapter{Instructions for Grok3}\label{InstructionsForGrok}
+\markdownInput{CONTRIBUTING.md}
+
+\chapter{Instructions for AI Contributors}\label{InstructionsForAIContributors}
 
 I have written this monograph with copious assistance from Grok 3, an AI chatbot from xAI.
 
@@ -166,9 +174,11 @@ The following section contains the general instructions which I have used to bri
 Naturally, these instructions have evolved over the course of the writing and this their state at the end.
 Different stages in the process demand different instructions, and I have tried to keep instructions of a general character  in a separate file (presented below), with supplementary files giving more specific asks for particular stages.
 
-\section{General Guidance for Grok}
+\section{General Guidance for AI Contributions}
 
 \input{grok3in.tex}
+
+
 
 \listoftables
 %\listoffigures

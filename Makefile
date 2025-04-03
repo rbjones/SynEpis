@@ -2,13 +2,15 @@
 
 GITDIR=../
 SRCDIR=$(GITDIR)/SynEpis
+ARCHDIR=$(SRCDIR)/arch
 PAPDIR=$(GITDIR)/www.rbjones.com/src/rbjpub/www/papers
 
 TXTS=
 PAPDIRTEXS=p035.tex
 LUALATEXS=part1.tex notes.tex arch.tex forgrok02.tex
 CONTEXTS=LogKb.tex
-TEXS=	introduction.tex intro2.tex intro3.tex intro4.tex intro5.tex \
+ATEXS=  intro2.tex
+TEXS=	introduction.tex intro3.tex intro4.tex intro5.tex \
 	intro6.tex intro7.tex intro8.tex intro9.tex intro10.tex \
 	intro11.tex intro12.tex intro13.tex intro14.tex\
 	Varepis.tex LogicalTruth.tex LogTruth01.tex \
@@ -17,7 +19,9 @@ TEXS=	introduction.tex intro2.tex intro3.tex intro4.tex intro5.tex \
 	kernel.tex kernel2.tex kernel3.tex kernel4.tex kernel5.tex \
 	ftt01.tex \
 	carnap01.tex \
-	grok3in.tex
+	grok3in.tex \
+	unilog01.tex
+MDS=CONTRIBUTING.md
 
 PAPPDFS=$(PAPDIRTEXS:.tex=.pdf) 
 LUAPDFS=$(LUALATEXS:.tex=.pdf) 
@@ -25,7 +29,7 @@ CONTEXTPDFS=$(CONTEXTS:.tex=.pdf)
 
 BIBFILES=rbj3.bib rbjfmu.bst
 
-SRCDIRCPY=$(TEXS) $(LUALATEXS) $(CONTEXTS) $(BIBFILES) $(TXTS) Makefile
+SRCDIRCPY=$(CONTEXTS) $(BIBFILES) $(LUALATEXS) $(MDS) $(TEXS) $(TXTS) Makefile
 PAPDIRCPY=$(PAPDIRTEXS)
 
 all: $(LUAPDFS)
@@ -43,7 +47,7 @@ $(PAPPDFS): %.pdf: %.tex $(BIBFILES) Makefile
 	makeindex $*
 	lualatex $<
 
-$(LUAPDFS): %.pdf: %.tex $(TEXS) $(BIBFILES) Makefile
+$(LUAPDFS): %.pdf: %.tex $(TEXS) $(BIBFILES) $(MDS) Makefile
 	lualatex $<
 	bibtex $*
 	makeindex $*

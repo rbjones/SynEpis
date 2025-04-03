@@ -1,0 +1,163 @@
+The central thesis of this work concerns the merits and applicability of a foundational approach to the representation of knowledge.
+Because of its intended role in the management of knowledge, it is natural to consider the philosophical aspects of this enterprise as belonging to epistemology, and the deliberate engineering of this foundational system, albeit rooted in fundamental as well as pragmatic considerations suggests that the resulting philosophical underpinnings might be thought of as a kind of synthetic philosophy.
+
+Despite this epistemological mission, the sources which have contributed to the establishment of this foundation system belong to disciplines distinct from, if adjacent to, epistemology.
+In the first instance the impetus comes from mathematics, pressed forward by the needs of science and engineering.
+The fruits of new mathematics in exploiting Newtonian science hastened its development at the cost of rigour, leading eventually to a sense crisis among some mathematicians about the foundations of these new mathematical methods.
+In due course those mathematicians initiated of a series of foundational innovations which, at first, improved the mathematics, but eventually descended into philosophical territory, and were addressed by those with a competence in both the mathematics and in philosophy.
+Ultimately these developments would lead to a new mathematical enterprise which became variously known as \emph{mathematical logic} and \emph{meta-mathematics}, involving the novelty for mathematics of considering symbolic languages as a subject matter for mathematics, rather than merely a means of writing it doen.
+
+The century from 1847, beginning with works by Boole \cite{boole1847mathematical} and DeMorgan \cite{demorgan1847formal} and closing after an important contribution to recursion theory by Emil Post \cite{post1944recursively}, and the foundation system which we present here has arisen primarily through the further developnent of developments in mathematical logic by Engineers who sought applications in Computer Science.
+
+Through that century of rapid development, primarily involving mathematicians and philosophers, a great variety of ideas have been explored, critiqued, compared and classified, often after the fact by scholars studying the history.
+The concepts employed are not always clearly defined, and the distinctions which may have seemed clear when first drawn, may turn out to be illusory on closer inspection.
+
+In relation to the foundation systems presented in this monograph, the most important adjectives with which I would like to describe them are \emph{universal} and \emph{foundational}, but it is clear to me that those terms are often read in ways which are not relevant in this case, so great care is needed in terminology.
+This chapter is primarily concerned with the suggestion that the proposed foundation systems are universal, but before making that case virtually all the technical terms mentioned will have to be given a clearer meaning, which will generally not be quite what might have been expected.
+
+\section{Some Preliminary Notes on Key Concepts}
+
+It is natural to describe the proposed foundation systems as \emph{universal}, because in these systems it is suggested, any declarative language can be interpreted.
+But in the history of mathematics, `universalism' is written of as in opposition to `pluralism' even though some of the earliest proponents of logical systems held to be universal were also enthusiastic pluralists.
+At the same tine, the supposedly opposed pluralistic lobby, were also closely associated with one of the two universal foundation systems which are discussed here.
+Another cleavage, that supposed between \emph{logicists} who believed in an intinate relationship between truths in mathematics and logic are often contrasted with formalists, the great majority of whose results were wholly acceptable to logicists.
+In relation to both of these dichotomies Rudolf Carnap provides an important example of a distinguished philosopher who did not so much sit on the fence, as comprehensively on both sides.
+
+Some of these conundrums can be resolved by refining the vocabulary and finding suitable ways of describing the nuances and confusions involved.
+One particular point of terminology of special relevance to this proposal is the question of what constitutes a foundation system, for it is only through some innovation in our ideas of what a foundation system is that an argument for universality can be sustained.
+Before coming to this, it will be useful for the reader to know some history as I perceive it.
+I do not pretend to historical scholarship, but even if I did, an account as brief as the one which follows could not help but be a gross oversimplification.
+The case which I will make for the proposed foundation system will be independent of the details of this sketch, but the perspective from which I worked in preparing it may be helpful to the reader in understanding its content.
+
+\section{Some History}
+
+\subsection{Aristotle's Premonitions}
+
+The use of extended and systematic deductive methods dates back as far as the ancient Greeks, from about 600 BC, who are said to have founded mathematics as a theoretical science.
+Over a period of about 300 years progress the methods and results of deductive mathematics continued, with a number of attempts at consolidation of which the most enduring proved to be Euclid's Elements \cite{euclidEl1}.
+At this stage, deduction was entirely informal, and there is little discussion of what does or does not constitute a sound deductive inference, the emphasis in the axiomatic method being the circumscription of the principles from which deductions begin, whose simplicity relative to the broader context of language in general may be responsible for the success of deduction in these relatively narrow domains.
+
+Philosophers sought to replicate the successes of axiomatic mathematics in broader domains, and mathematics was considered an important study for philosophers as recognised by Plato's Academy.
+Aristotle was the first of these Greek philosophers to have studied are written about logic, producing six books which were subsequently to be gathered together as his \emph{Organon}\cite{aristotleL325,aristotleL391,aristotleL400}.
+Two notable aims of this work were, firstly to articulate Aristotle's conception of \emph{Demonstrative Science}, a systematic account of how to apply deductive reasoning beyond mathematics and throughout the sciences, and secondly to codify, in his syllogistic logic, principles of deductive reasoning, thus going beyond the practice of axiomatic method as understood in his time.
+
+Though there may be no explicit claim here to a \emph{universal} logical system, it may be thought that logical universalism is implicit in Aristotle's conception of Demonstrative Science.
+However, impressive though it is, Aristotle's syllogistic would prove insufficient for the needs of science, or indeed mathematics.
+Mathematics continued to progess, but secured no benefit from those early logical systems, continuing to depend on informal deduction, and moving forward at the cost of some retrenchment from the peak of rigour found in Euclidean Geometry.
+
+\subsection{Modern Science}
+
+A new conception of science emerged after the renaissance, and represents a clear break with Aristotle's conception of Demonstrative science, particularly as expressed in Bacon's \emph{Novum Organun}\cite{bacon2017novum}, which is quite derisory about Aristotle.
+The main features of this new scientific method are the emphasis of observation and experimental method, providing a basis for establishing the principles of nature, and the downplaying the role of deduction and of Aristotle's syllogism.
+
+Nevertheless, the modern conception of scientific method has been variously called the hypothetico-deductive method emphasising perhaps the role of deduction in testing scientific hypothesis, or (rarely!) the nomologico-deductive method, touching upon the role of deduction in the application of established laws.
+
+Despite its departure from Aristotle, there may perhaps still be seen an element of universalism here.
+
+\subsection{Leibnizian Universalism}
+
+By contrast with Bacon, Leibniz retained an enthusiasm for Aristotle's logic.
+By contrast with Aristotle, Leibniz was explicit about his universalistic ideas, which however remained primarily based around Aristotle's Syllogistic.
+Among other aspects of his universalism, he enunciated the ideas of a \emph{Lingua Characteristica} in which all scientific knowledge could be expressed in a way amenable to automated computation determining the truth or falsity of any conjecture, the method for which was to be captured in his \emph{calculus ratiocinator}\cite{couturat1901logique,Peckhaus2004,Lenzen2018}.
+
+Notwithstanding his enthusiasm for a universalistic perspective, Leibniz's ideas were not realisable.
+A first reason for this was the inadequacies of Aristotle's logic, which fell well short of the needs of mathematics, let alone science, coupled with Aristotle's failure so see that inadequacy and contemplate radical advancements.
+Another group objections would become clearer as mathematical logic began to characterise the limits of logical methods, so that no-one now believes that scientific truth is decidable, as was supposed implicitly in Leibniz's conception of the \emph{Calculus Ratiocinator}.
+
+Nevertheless, the ideas and aspirations of Leibniz were to prove inspirational for many of the principle figures in the emergence of modern logic and of the universalist conception with which it might be said to have begun.
+
+\subsection{Frege's Begriffsschrift and his Universalism}
+
+It is in the nineteenth century that the slide in standards of rigour in mathematics from its zenith in Euclid reached a crisis point and provoked an extended period of foundational repair ultimately reaching a complete transformation of formal logic.
+A central concern of that crisis was the number system required for the differential and integral calculus, independently devised by both Newton and Leibniz, and a broad filed of techniques in the development of mathematical analysis flowing from them and stimulated by applications in science, technology and engineering.
+
+Before this, in the 18th Century, the philosopher David Hume had made the distinction between ``matters of fact'' and relations between ideas'' in which the former were empirical claims about the material world, and the latter both logical and mathematical truths, taking mathematics thus to be a part of logic.
+Immanual Kant made a particular feature in his philosophy of rejecting Hume's simple picture effectively denying that the theory of natural numbers could be derive logically from an appropriate definition of the numbers.
+
+As the rigorisation of mathematics proceeded during the 19th Century, mathematical analysis was recast avoiding infinitesimal numbers in what became known as the real numbers, which were then defined in terms of cuts in the rational numbers, themselves constructed from the positive whole numbers (`natural numbers').
+At this point philosophy takes over, in the person of Gottlob Frege, who was motivated to refute the ideas of Kant in relation to the status of mathematics, by deriving mathematics logically from definitions of the natural numbers.
+
+For this purpose he created a new general purpose logical notation and deductive system which he called \emph{Begriffsschrift}\cite{heijenoort67} (`concept notation').
+This simple logical system at last overcame the severe limitations of Aristotle's syllgistic, and provided a logical basis for the derivation of mathematics.
+In doing so it provided an account of what constituted a sound deductive inference, thus passing beyond the standards of Euclidean axiomatic methods by systematising not only the principles from which deduction might proceed, but also the criteria for the deductive reasoning used to derive results from those principles.
+
+The univeralist conception of Frege's logic is captured in his maxim:
+
+\begin{quote}Mathematics = Logic + Definitions\end{quote}
+
+  This later became known also as the doctrine of \emph{logicism} as an account of the nature of mathematics, a conception which would later be to be progressed by philosophers such as Bertrand Russell and Rudolf Carnap.
+  Frege moved forward from his Begriffsschrift in 1979 to the formalisation of mathematics in his \emph{Grundgesetze der Arithmetic}\cite{frege93}, of which Volume 1 was studied by Bertrand Russel in the run up to publication of the second volume.
+
+  In it, Russell found that the system admitted the derivation of logical contradictions through its unlimited ability to form seta by abstraction, which was already known to be among the difficulties of Cantor's set theory.
+  This became known as \emph{Russell's Paradox} and prompted an acknowledgement by Frege that the system on which he had based his \emph{magnum opus} was compromised.
+
+  \subsection{Hilbert's Pluralism}
+
+  Toward the end of the 19th Century the mathematician David Hilbert, who would later be important in the development of mathematical logic, took an interest in axiomatic geometry \cite{hilbertFG}, and we find in his work on this another approach to reinstatement and  advancement beyond the rigour of Euclid's methods.
+
+  Hilbert is regarded as the main proponent of those mathematical methods which have been contrasted with the universalism of Frege and Russell and are thus described as a form of logical pluralism.
+  Curiously this does not involve a variety of conceptions of logic, but rather the idea that mathematics can be conducted in its various branches by adopting axioms characterising the mathematical entities under consideration and different axiom systems deriving the resulting theories, and accepting all the various interpretations of those axions.
+  The existence of mathematical entities, according to Hilbert, depended on nothing more than the logical consistency of the axioms.
+
+  \subsection{Russell's Logicism}
+  
+The contradictions found in Frege's foundations were a serious problem not only for Frege, but also for Russell, for he had anticipated following his own \emph{Principles of Mathematics}\cite{russellPRM} by a further volume with a purpose similar to Frege's.
+Though Frege never came back from this disappointment with an amended system which was more robust, Russell continued, with great difficulty devising an alternative logical type theory which was ultimately published some eight years later \cite{russell1908} and became the basis for his joint work with A.N.Whitehead on \emph{Principia Mathematica}\cite{russell10} in which Russell's logicist conception of mathematics was supported by the derivation of large parts of mathematics in Russell's univerally conceived Theory of Types.
+
+The challenge which Russell faced ws to create a foundation system in which mathematics could be formally deduced from definitions of the concepts of mathematics, without making arbitrary choices for the sake of avoiding paradox, but rather making choices informed by coherent philosophical rationale.
+He wanted to correct perceptible flaws in Frege's system, rather than find the easiest fix.
+
+From the discovery of ``Russell's Paradox''in Frege's system it took Russell 8 years to publish his resolution \cite{russell08}, and regrettably, despite his best intentions, it was not wholly satisfactory either from a technical or a philosophical perspective.
+Nevertheless, it did provide a viable basis for the massive project of formalisation which he then undertook with the aid of A.N.Whitehead.
+\emph{Principia Mathematica} \cite{russell10} as it was called (after Newton's work bearing the same name, was to prove very influential over the next few decades.
+
+This is a significant stake in the ground for this project.
+The main foundation system proposed in this monograph for practical use in knowledge representation is a direct descendent of Russell's Theory of Types, and one way to approach an understanding of the system is through an acquaintance with its evolution from this point.
+
+\subsection{Zermelo's Set Theory}
+
+At the same time as Russell published his Theory of Types, an alternative with very different characteristics, but also inspired by the foundational developments in 19th Century Mathematics, was being published alongside it.
+In a 1908 paper, Zermelo\cite{zermelo08} provides an axiomatic basis for set theory that formalises and extends the foundational approach to mathematics first explored by Dedekind in 1988\cite{dedekind1888}, where sets and their properties were used to define the natural numbers and establish a rigorous basis for arithmetic.
+
+A merit of this foundational approach is its ontological transparency and simplicity, based as it was on the hierarchy of well-founded sets which may be informally defined using the inductive definition ``a set is any definite collection of sets'', conjuring up a heirarchy of sets obtained by starting with nothing and then in an orderly way forming sets from any combination of sets which has already been formed.
+
+\cite{dedekind1888,zermelo08,mirimanoff1917,fraenkel1922,skolem1923,vonNeumann1923,vonNeumann1925}
+
+\subsection{Rudolf Carnap}
+
+  Rudolf Carnap was introduced early in his studies to the work of Frege and later became acquainted with and inspired also by Russell.
+Carnap seems to have been pluralistic from his student days, before he acknowledges any influence from Frege, particularly in relation to ontological presumptions which featured in the philosophy of science, and also sought to bridge philosophy and science in his doctoral dissertation.
+  
+  He mentions Russell in his `Intellectual Autobiography'\cite{carnap63a,carnap63} as having inspired his own desire to extend the new logical methods beyond mathematics and into science.
+  But he was acutely aware of the distinction between logical truth and empirical truth (which he spoke of as the analytic/synthetic distinction), and felt therefore that the derivation of empirical science could not be undertaken in a purely logical system.
+
+    He was later influenced by the work of Hilbert and adopted a more pluralistic conception of logic than Frege and Russell, which he  saw as dictated by the extension of logic to address empirical matters.
+  He was neverthess a logicist, holding with Frege and Russell that mathematics fell under Frege's conception as logically derivable from the definitions of mathematical concepts.
+  The departure from purely logical truth was to be accomplished for empirical science by the addition of empirical principles to each scientific domain, from which the details of the behaviours in that domain could be logically derived.
+  His pluralism was explicit and is most conspicuous in his volume on the logical syntax of language \cite{carnap37}.
+
+  \subsection{Alonzo Church}
+
+  \subsection{Dana Scott and The Verification of Software}
+
+  \subsection{Michael Gordon and The Verification of Hardware}
+
+  
+  
+  \section{Problems with Logical Universalism}
+
+  The contradiction in Frege's system revealed the first difficulty with the universalistic conception of logic, for it became apparent that explicit ontological choices had to establish a system in which mathematics could be derived from the definitions of mathematical concepts, and it was not clear that logic alone provided a basis for these choices.
+  Questions about ontology, even if exclusively concerned with the purely abstract entities studied in mathematics.
+  This was however a problem mainly for the logicist conception of mathematics rather than a pluralistic conception of logic, and mathematical logicians were later to attach particular importance to one particular logical system as definitive of pure logical truth, which we now call first order logic.
+
+  Though it may be thought of as a single logical system, it is clear from typical presentations of this logic, that it is thought of as pluralistic, based on the concept of a \emph{first order language} in which the vocabulary of non-logical symbols is fixed.
+  The idea that one has a single logic and proceed thence by definition is lost.
+
+  What these ruminations reveal is a fluidity in the distinction, which makes it questionable how fruitful this distinction is.
+
+  \section{Some Resolutions in Carnap's Pluralism and Logicism}
+
+  
+
+  \section{Pluralistic Universalism}
+  

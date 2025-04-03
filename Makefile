@@ -7,7 +7,8 @@ PAPDIR=$(GITDIR)/www.rbjones.com/src/rbjpub/www/papers
 
 TXTS=
 PAPDIRTEXS=p035.tex
-LUALATEXS=part1.tex notes.tex arch.tex forgrok02.tex
+LUALATEXS=notes.tex arch.tex forgrok02.tex
+LUABLATEXS=part1.tex
 CONTEXTS=LogKb.tex
 ATEXS=  intro2.tex
 TEXS=	introduction.tex intro3.tex intro4.tex intro5.tex \
@@ -25,14 +26,15 @@ MDS=CONTRIBUTING.md
 
 PAPPDFS=$(PAPDIRTEXS:.tex=.pdf) 
 LUAPDFS=$(LUALATEXS:.tex=.pdf) 
+LUABPDFS=$(LUABLATEXS:.tex=.pdf) 
 CONTEXTPDFS=$(CONTEXTS:.tex=.pdf)
 
-BIBFILES=rbj3.bib rbjfmu.bst
+BIBFILES=rbj3.bib rbj4.bib rbjfmu.bst
 
-SRCDIRCPY=$(CONTEXTS) $(BIBFILES) $(LUALATEXS) $(MDS) $(TEXS) $(TXTS) Makefile
+SRCDIRCPY=$(CONTEXTS) $(BIBFILES) $(LUALATEXS)  $(LUABLATEXS) $(PDFLATEXS) $(MDS) $(TEXS) $(TXTS) Makefile
 PAPDIRCPY=$(PAPDIRTEXS)
 
-all: $(LUAPDFS)
+all: $(PDFS) $(LUAPDFS)
 
 *.bbl:	%.tex rbj3.bib
 	bibtex %.tex
@@ -47,7 +49,13 @@ $(PAPPDFS): %.pdf: %.tex $(BIBFILES) Makefile
 	makeindex $*
 	lualatex $<
 
-$(LUAPDFS): %.pdf: %.tex $(TEXS) $(BIBFILES) $(MDS) Makefile
+$(LUABPDFS): %.pdf: %.tex $(TEXS) rbj4.bib $(MDS) Makefile
+	lualatex $<
+	biber $*
+	makeindex $*
+	lualatex $<
+
+$(LUAPDFS): %.pdf: %.tex $(TEXS) rbj3.bib rbjfmu.bst $(MDS) Makefile
 	lualatex $<
 	bibtex $*
 	makeindex $*

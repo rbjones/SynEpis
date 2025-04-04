@@ -14,7 +14,7 @@ ATEXS=  intro2.tex
 TEXS=	introduction.tex intro3.tex intro4.tex intro5.tex \
 	intro6.tex intro7.tex intro8.tex intro9.tex intro10.tex \
 	intro11.tex intro12.tex intro13.tex intro14.tex\
-	Varepis.tex LogicalTruth.tex LogTruth01.tex \
+	varepis.tex LogicalTruth.tex LogTruth01.tex \
 	epistem01.tex \
 	edk01.tex edk02.tex \
 	kernel.tex kernel2.tex kernel3.tex kernel4.tex kernel5.tex \
@@ -29,7 +29,7 @@ LUAPDFS=$(LUALATEXS:.tex=.pdf)
 LUABPDFS=$(LUABLATEXS:.tex=.pdf) 
 CONTEXTPDFS=$(CONTEXTS:.tex=.pdf)
 
-BIBFILES=rbj3.bib rbj4.bib rbjfmu.bst
+BIBFILES=rbj3.bib rbj4.bib rbj5.bib rbjfmu.bst
 
 SRCDIRCPY=$(CONTEXTS) $(BIBFILES) $(LUALATEXS)  $(LUABLATEXS) $(PDFLATEXS) $(MDS) $(TEXS) $(TXTS) Makefile
 PAPDIRCPY=$(PAPDIRTEXS)
@@ -49,7 +49,7 @@ $(PAPPDFS): %.pdf: %.tex $(BIBFILES) Makefile
 	makeindex $*
 	lualatex $<
 
-$(LUABPDFS): %.pdf: %.tex $(TEXS) rbj4.bib $(MDS) Makefile
+$(LUABPDFS): %.pdf: %.tex $(TEXS) rbj5.bib $(MDS) Makefile
 	lualatex $<
 	biber $*
 	makeindex $*

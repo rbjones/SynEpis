@@ -34,6 +34,14 @@
 \renewcommand{\thefootnote}{\roman{footnote}}
 
 \newcommand{\ignore}[1]{}
+
+\usepackage[
+  backend=biber,
+  style=numeric,
+  sorting=nty
+]{biblatex}
+\addbibresource{rbj4.bib}
+
 \newcommand{\rbjdeff}[1]{\textbf{\itshape{#1}}}
 \newcommand{\rbjdef}[1]{\rbjdeff{#1}\label{LABEL#1}\index{#1}}
 \newcommand{\rbjuse}[1]{\hyperref[LABEL#1]{\itshape{#1}}}
@@ -185,8 +193,7 @@ Different stages in the process demand different instructions, and I have tried 
 
 %\phantomsection
 \addcontentsline{toc}{section}{Bibliography}
-\bibliographystyle{rbjfmu}
-\bibliography{rbj3}
+\printbibliography[title={Bibliography}]
 
 %\phantomsection
 \renewcommand{\indexname}{Index of Defined Terms}
@@ -199,7 +206,6 @@ Different stages in the process demand different instructions, and I have tried 
 %\tiny{
 %Started 2024-10-19
 %}%tiny
-
 
 \end{document}
 

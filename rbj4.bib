@@ -1,3 +1,123 @@
+% rbj4.bib - Minimal bibliography for current draft
+% Curated subset of entries from rbj5.bib, selected for project use
+% Maintained in BibLaTeX format, with @string defs as required
+% Updated by copying entries from rbj5.bib as needed
+
+@string{ACH = "A.C.~Hayward"}
+@string{AJH = "A.J.~Hammon"}
+@string{AJM = "American Journal of Mathematics"}
+@string{ANF = "Arrow Non-Fiction"}
+@string{AJ = "R.D.~Arthan and R.B.~Jones"}
+@string{AP = "Academic Press"}
+@string{AU = "George Allen \& Unwin"}
+@string{AUP = "Automatic Press"}
+@string{AW = "Addison-Wesley"}
+@string{BB = "Basil Blackwell"}
+@string{BJH = "B.J. Homer"}
+@string{BP = "Blackwell"}
+@string{BPP = "Bloomsbury Publishing PLC"}
+@string{BM = "R.S.~Boyer and J.S.~Moore"}
+@string{CACM = "Communications of the ACM"}
+@string{CAJ = "C.A. Jervis"}
+@string{CB = "Canongate Books"}
+@string{CCL = "Cahier du Centre de Logique"}
+@string{CESG = "CESG"}
+@string{CP = "Clarendon Press"}
+@string{CSC = "Centre for Social Cohesion"}
+@string{CUP = "Cambridge University Press"}
+@string{DJK = "D.J. King"}
+@string{DO = "Dover"}
+@string{DK = "Duckworth"}
+@string{DRA = "Defence Research Agency, Malvern"}
+@string{DS = "ICL Secure Systems"}
+@string{EM = "Everyman"}
+@string{EB = "Encounter Books"}
+@string{EUP = "Edinburgh University Press"}
+@string{FM = "Fundamenta Mathematica"}
+@string{FP = "Free Press"}
+@string{GMP = "G.M. Prout"}
+@string{GTS = "G.T. Scullard"}
+@string{HEATH = "D.C. Heath \& Co."}
+@string{HAR = "Harrap"}
+@string{HC = "Harper Collins"}
+@string{HOG = "Hogarth Press"}
+@string{HPNY = "Humanties Press, New York"}
+@string{HP = "Harper Perennial"}
+@string{HR = "Harper and Row"}
+@string{HU = "Hutchinson"}
+@string{HUP = "Harvard University Press"}
+@string{IRD = "Ivan R. Dee"}
+@string{ISS = "ICL Secure Systems"}
+@string{JAR = "Journal of Automated Reasoning"}
+@string{JP = "The Journal of Philosophy"}
+@string{JSL = "Journal of Symbolic Logic"}
+@string{JW = "John Wiley \& Sons, Inc."}
+@string{KB = "K. Blackburn"}
+@string{KP = "Kegan and Paul"}
+@string{L1 = "Lemma 1 Ltd."}
+@string{L1URL = "{\tt \url{http://www.lemma-one.com}}"}
+@string{LCL = "Loeb Classical Library"}
+@string{LNCS = "Lecture Notes in Computer Science"}
+@string{LNAI = "Lecture Notes in Artifical Intelligence"}
+@string{LMS = "London Mathematical Society"}
+@string{LONG = "Longman"}
+@string{M = "Methuen"}
+@string{MH = "McGraw-Hill Book Company"}
+@string{MIND = "Mind"}
+@string{MIT = "MIT Press"}
+@string{ML = "Modern Library"}
+@string{MM = "MacMillan"}
+@string{MMU = "MacMillan USA"}
+@string{NCF = "New Culture Forum"}
+@string{NH = "North Holland"}
+@string{OUP = "Oxford University Press"}
+@string{OCP = "Open Court Publishing"}
+@string{PAAS = "Proc. Amer. Acad. Arts and Sci."}
+@string{PAS = "Procedings of the Aristotelian Society"}
+@string{PB = "Penguin Books"}
+@string{PC = "Penguin Classics"}
+@string{PCPS = "Procedings of the Cambridge Philosophical Society"}
+@string{PDS = "Perseus Distribution Services"}
+@string{PH = "Prentice Hall"}
+@string{PI = "Pimlico"}
+@string{PHI = "Prentice Hall International"}
+@string{PIP = "Pitchstone Publishing"}
+@string{PLMS = "Procedings of the London Mathematical Society"}
+@string{PMC = "Penguin Modern Classics"}
+@string{PP = "Phoenix Press"}
+@string{PPQ = "Pacific Philosophical Quarterly"}
+@string{PR = "Philosophical Review"}
+@string{PRB = "Profile Books"}
+@string{PS = "Philosophical Studies"}
+@string{PUP = "Princeton University Press"}
+@string{PVSDC = "PVSpade.com"}
+@string{RBJ = "{Roger Bishop} Jones"}
+@string{RBJDC = "RBJones.com"}
+@string{RBJEMAIL = "{\tt rbj@rbjones.com}"}
+@string{RC = "Rudolf~Carnap"}
+@string{RDA = "R.D.~Arthan"}
+@string{RDAEMAIL = "{\tt rda@lemma-one.com}"}
+@string{RIP = "Revue Internationale de Philosophie"}
+@string{RKP = "Routledge Kegan and Paul"}
+@string{ROU = "Routledge"}
+@string{RP = "Reidel Publishing"}
+@string{RS = "R.~Stokes"}
+@string{RSRE = "MOD PE, RSRE"}
+@string{SK = "K{\ouml}rner, Stephan"}
+@string{SMP = "St. Martin{\q}s Press"}
+@string{SV = "Springer Verlag"}
+@string{TBA = "Author TBA"}
+@string{TP = "Thoemmes Press"}
+@string{TPC = "Text Publishing Company"}
+@string{TPR = "The Philosophical Review"}
+@string{UCAP = "University of California Press"}
+@string{UCP = "University of Chicago Press"}
+@string{UTUBE = "You Tube"}
+@string{VP = "Viking Press"}
+@string{WBC = "Wadworth and Brook/Cole"}
+@string{WIN = "Winnersh"}
+@string{WVQ = "W.V.~Quine"}
+
 @book{aristotle-sr,
   author = {Aristotle},
   title = {On Sophistical Refutations. On Coming-to-be and Passing Away. On the Cosmos},
@@ -47,15 +167,14 @@
   publisher = {Kegan and Paul},
   location = {London}
 }
+
 @incollection{carnap1963,
   author = {Carnap, Rudolf},
   title = {Intellectual Autobiography},
   booktitle = {The Philosophy of Rudolf Carnap},
-  editor = {Schilpp, Paul},
-  year = {1963},
-  publisher = {Open Court Publishing},
-  location = {La Salle, IL}
+  crossref = {schilpp1963}
 }
+
 @book{couturat1901,
   author = {Couturat, Louis},
   title = {La Logique de Leibniz: D'après des Documents Inédits},
@@ -93,6 +212,14 @@
   year = {1956},
   publisher = {Dover},
   location = {New York}
+}
+@book{ewald1996,
+  editor = {Ewald, William B.},
+  title = {From Kant to Hilbert: A Source Book in the Foundations of Mathematics},
+  year = {1996},
+  publisher = {Oxford University Press},
+  location = {Oxford},
+  volume = {II}
 }
 @article{fraenkel1922,
   author = {Fraenkel, Abraham A.},
@@ -176,12 +303,9 @@
 @incollection{russell1908,
   author = {Russell, Bertrand},
   title = {Mathematical Logic as Based on the Theory of Types},
+  year = {1908},
+  crossref = {vanheijenoort1967},
   booktitle = {From Frege to Gödel: A Source Book in Mathematical Logic, 1879--1931},
-  editor = {Van Heijenoort, Jean},
-  year = {1967},
-  origdate = {1908},
-  publisher = {Harvard University Press},
-  location = {Cambridge, MA},
   pages = {150--182}
 }
 @book{schilpp1963,
@@ -235,11 +359,25 @@
 @incollection{zermelo1908,
   author = {Zermelo, Ernst},
   title = {Investigations in the Foundations of Set Theory I},
+  year = {1908},
+  crossref = {vanheijenoort1967},
   booktitle = {From Frege to Gödel: A Source Book in Mathematical Logic, 1879--1931},
-  editor = {Van Heijenoort, Jean},
-  year = {1967},
-  origdate = {1908},
-  publisher = {Harvard University Press},
-  location = {Cambridge, MA},
   pages = {199--215}
+}
+@article{zermelo1930,
+  author = {Zermelo, Ernst},
+  title = {Über Grenzzahlen und Mengenbereiche: Neue Untersuchungen über die Grundlagen der Mengenlehre},
+  journal = {Fundamenta Mathematicae},
+  year = {1930},
+  volume = {16},
+  pages = {29--47},
+  language = {German}
+}
+@incollection{zermelo1930en,
+  author = {Zermelo, Ernst},
+  title = {On Boundary Numbers and Domains of Sets: New Investigations in the Foundations of Set Theory},
+  crossref = {ewald1996},
+  booktitle = {From Kant to Hilbert: A Source Book in the Foundations of Mathematics},
+  pages = {1208--1233},
+  language = {English}
 }

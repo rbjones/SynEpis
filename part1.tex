@@ -46,8 +46,8 @@
 \newcommand{\rbjdef}[1]{\rbjdeff{#1}\label{LABEL#1}\index{#1}}
 \newcommand{\rbjuse}[1]{\hyperref[LABEL#1]{\itshape{#1}}}
 \newcommand{\hreg}[2]{\href{#1}{#2}\footnote{\url{#1}}}
-\newcommand{\groknote}[1]{\vfil
-  {\bf Note for AI Contributors:}
+\newcommand{\contribnote}[1]{\vfil
+  {\bf Note for Contributors:}
     \begin{quote}
       {\it #1}
     \end{quote}
@@ -120,8 +120,8 @@
 
 \chapter{Introduction}
 
-\groknote{Please read Appendix \ref{InstructionsForAIContributors} first for instructions on how to read this document and your role in its continuing composition.}
-\input{intro14.tex}
+\contribnote{Please read Appendix \ref{InstructionsForAIContributors} first for instructions on how to read this document and the ways in which you might contribute to its continuing composition.}
+\input{intro15.tex}
 
 \chapter{Logical Universalism and Pluralism}
 
@@ -169,6 +169,10 @@
 \input{carnap01.tex}
 \resetnotes
 }%ignore
+
+\chapter{Formal Specifications of Gordon's HOL}
+
+\input{holdetails.tex}
 
 \markdownInput{CONTRIBUTING.md}
 

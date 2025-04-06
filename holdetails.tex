@@ -1,0 +1,15 @@
+There are multiple accounts of the syntax and semantics of the Cambridge HOL logic.
+The primary source has been Mike Gordon and his team at Cambridge University Computer Labs.
+It might be helpful to first read Gordon's account of his earlier work on mechanising Dana Scott's LCF (Logic for Computable Functions) an early approach to program verification and the path which lead from there to the adoption of HOL for hardware verification \cite{gordon2000}.
+
+Though the development of his distinctive variant on Higher Order Logic and its implementation following the `LCF Paradigm' in the functional programming language ML which had been designed for the original LCF system was undertaken in about 1986, its most complete documentation did not appear until a project had been specially funded in 1993 \cite{gordon1993}.
+In that volume the semantics of this HOL was provided in first order set theory by Andy Pitts\cite{pitts1993}.
+
+Meanwhile, the language had been taken up by the UK Computer Company ICL, primarily to provide a basis for a multi-lingual proof tool (ProofPower) supporting the Z specification language by shallow embedding (Z in HOL in ProofPower\cite{arthan2005}), and extensive formal documentation of the HOL logic and its implementation in ProofPower was prepared under that development and completed in 1993 \cite{arthan2001a,arthan2001b,arthan2001c,arthan2001d,arthan2001e}.
+
+The adoption of Gordon's HOL by ICL and the collaboration between the teams resulted in some relatively minor changes, most notably in the rules for extending the language during the development of applications.
+At first the HOL system allowed only definitions, in which each new name introduced was given a definite meaning and hence denoted a single (albeit possibly very complex) entity.
+The Z specification language allowed for looser specifications, in which new name might be introduced as satisfying a property which did not uniquely identify any value, and hence would have several models.
+To enable a faithful embedding into HOL a similarly flexible notion of conservative extension would be helpful, and was therefore introduced.
+Refinement of this facility then continued later involving multiple parties as the use of this variant of HOL spread into more communities and was re-oplemented in other tools.
+The last, and possibly final increment on this work may be found in \cite{arthan2016}.

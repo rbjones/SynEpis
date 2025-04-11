@@ -1,80 +1,66 @@
-This epistemological synthesis is the first part in a progression which might ultimately advance from epistemology though architectural design, API and protocol specification to the coding of software supporting the management of knowledge repositories.
-The boundary between epistemology and the earliest parts of system architecture is porous, and the same subject matters can be addressed both from a philosophical and an engineering perspective.
-This monograph focuses on the former, but is motivated by the latter.
+In this monograph I engage in certain philosophical preliminaries to the design and implementation of software for the management of large widely distributed repositories of declarative knowledge.
 
-A central purpose is to argue that a single underlying abstract logical system suffices for the representation of all \emph{declarative} knowledge, and and is both theoretically and practically suited to provide an underlying representation for large distributed repositories of knowledge encompassing all that is known to humanity.
+In this introduction I aim to describe the main points to be addressed, the breakdown material into chapters, and give an account in some detail of how the chapters will approach their task.
 
-It was once thought that the representation of knowledge was a nut which had to be cracked in order to achieve artificial intelligence.
-It is now clear that the Turing test and many more detailed and demanding tests of intelligence can be passed without any advancement in the way in which knowledge is managed beyond information structures largely inspired by the structure of the human brain.
-The impetus to improve our grip on truth and our ability to reason coherently may therefore benefit from the growing intelligence of information technology, but must be fuelled independently, possibly by initiatives such as this one.
+The core idea with which I begin, is that all declarative knowledge may be understood as providing abstract models of reality which support reasoning about that reality, sometimes enabling the planning of courses of action or design of artefacts.
+In their application to reality such abstract models will be given concrete reality, but in the implementation of software support an underlying abstract representation suffices.
 
-The proposed logical system is closely based on the logic devised for and used in the Cambridge HOL Interactive Theorem Prover\cite{gordon1993}, is argued to be, in important theoretical and practical senses, universal for the representation of declarative knowledge.
-It is offered as a foundation for abstract semantics in general, not merely a logical foundation for mathematics (for which its predecessors were intended).
+Humans use diverse languages and notations to express and work with declarative knowledge.
+This and other factors introduce risk of incoherence, which will vitiate the results of any extensive reasoning.
+These risks could be mitigated by the adoption of a single underlying abstract logical system, which is what I propose in this monograph.
+To support that case, I will offer a specific system which includes a universal abstract syntax into which the abstract syntax of any other finitary declarative language can be mapped, and a rich semantics, enabling the semantics of other languages to be attached to that syntactically embedded language.
 
-Why do we need a 'foundation' for 'abstract semantics', and what are they?
-These are just some of the philosophical questions which I hope to clarify in this monograph.
-We cannot be certain of the truth of a declarative sentence if its meaning is unclear, and that same difficulty will arise for any language in which we might seek its clarification.
-This is the problem of semantic regress, and the role of a semantic foundation is to terminate that regress.
+To support these claims of universality I will provide a description of two such universal systems in a manner intended to expose those merits.
+Of the two systems which will be considered, one is presented as idea for the presentation of universal abstract semantics, and the second as having that same feature in a more complex form, as well as a better structure for interpreting practical languages.
 
-\vbox{\ }
+\section{Chapter 2 - Some History}
 
-The clarification of and justification for these claims forms an important part of the purpose and substance of this monograph, alongside some arguments intended to counter the scepticism about semantics to which philosophers are prone, particularly in relation to problem of semantic regress and that of regress in justification.
+The presentation will begin in chapter 2 with a history showing how the key features of these systems have evolved.
+The history is oriented to exposing the development of the semantics, with a particular interest in ontology.
+In it the origins are traced of two logical systems.
+The first of these is the first order set theory whose axiomatic presentation is known as ZFC, Zermelo-Fraenkel with choice.
+The second is the variant of the simple theory of types due to Alonzo Church\cite{church1940}, which is discussed both in the form originally published by Church and then as adapted by Michael Gordon for use in the formal verification of digital electronics.
 
-In these first introductory words on these ideas I will give two different perspectives on this same proposal.
-But first some observations about desiderata.
+The history comes in three parts.
+The first part very briefly sketches the early history of logic and the extended use of deduction in mathematics over 2 millenia from Aristotle to Dedekind, at which point mathematics is well advanced in addressing a foundational crisis.
+That crisis caused clarification of multiple layers of mathematical concepts, eventually reaching down to the bedrock of what we might now call \emph{logical foundations for mathematics}, with Dedekind defining the condition for a collection or set to be infinite in number\cite{dedekind1847}, thus for the first time making the idea of a complete infinity respectable and advancing the status of sets in the clarification of foundational issues.
 
-The development of science and technology, upon which the prosperity of humanity has been built, is based on scientific methods in which declarative knowledge and deductive reasoning are central.
-The systematic and extended use of deductive reasoning dates from the beginnings of mathematics as a theoretical discipline in ancient Greece, which resulted in the articulation of the axiomatic method and the elements of mathematics by Euclid which has remained influential to the present day.
-Axiomatic mathematics was influential among Greek philosophers because they sought to understand the cosmos through reason, and by contrast with the advances in mathematics, reason proved impotent to secure consensus on truth in those broader domains.
-
-Some Greek Philosophers nevertheless felt that Science should be a deductive discipline, and this is most explicitly presented in Aristotle's \emph{Organon}, his works on logic, in which the idea of \emph{demonstrative science} is presented and supported.
-That early conception of science fell well short of modern scientific methods, and Aristotelian science was overtaken by one in which the deductive application of scientific principles was considered 
-
-\paragraph{Declarative Language}
-
-Declarative language, that expressed by indicative sentences in ordinary language, or in formal notations designed for similar purposes.
-These are sentences which have truth values in appropriate contexts.
-The context in which such a sentence is expressed determines a certain range of possibilities, and the sentence will usually vary in truth value according as to which of those possibilities obtains.
-The truth of such an indicative sentence narrows down the range of possibilities and thereby conveys information about how the world (or other subject matter) is.
-
-\section{Knowledge}
-
-The classical definition of knowledge first appearing in the works of Plato, is that knowledge is \emph{justifiable true belief}.
-However, this monograph addresses a broader conception of knowledge which is likely to be more convenient for the management of large bodies of knowledge.
-
-This is not a claim about what knowledge \emph{is}, it is merely a description of the particular usage adopted in this monograph.
-Relative to the traditional perspective, it differs by being neither psychological nor homocentric.
-Knowledge is not exclusively mental, but predominantly physical.
-
-Knowledge is a physical phenomenon in which some part of the physical universe contains information about some other thing, often another part of that universe.
-Usually that it does so derives from its origin in a causal relationship between the two, though this may be very indirect and tenuous.
-
-Thus, we acquire through our senses knowledge of our environment, because there is a causal chain which begins with various features of the environment, acts through the media of our senses (light, sound, physical pressure) and is conveyed to, processed and stored in our brains by the neural networks which form our central nervous systems.
-
-More obliquely, on the basis of such observations of the universe around us, scientists formulate and test hypotheses about that universe, which if shown to be accurate become part of the body of scientific knowledge recorded in scientific journals and held in a variety of storage media in automated information systems.
-
-The purpose of encoding information in this way is to enable people to live their lives better as a result of planning how to achieve their objectives in a way which takes into account the likely outcome of such plans.
-Knowledge about how the world \emph{is} is crucial to this, as is knowledge of how the world would come to be if our plans were put into effect.
-
-For knowledge to be useful in this way the relationship between the representation and the represented must be understood both by the people creating the knowledge or be consistent with the causal chain which effected it, and by those seeking to take advantage of the knowledge.
-Indeed useful or not, one cannot reasonably be said to possess knowledge if you are merely in possession of the representation but not its meaning, or what we call more specifically, its semantics (to distinguish it from aspects of meaning which might involve matters more related to its significance than its content).
-
-Semantics then, is an essential aspect of the representation of knowledge, and it is something which attaches not to the specific content of a single representative of knowledge, but to a general method of encoding a certain kind of knowledge of which it is an instance.
-Such general schemes include what we call languages, but may include coding schemes which we might not think of in that way, or might only be figuratively describing as knowledge.
-The coding of the structure of proteins in the DNA of the chromosomes of living organisms is an example of such an encoding.
-We might also consider a photograph to be knowledge of its subject, but might struggle to identify the language in which it is expressed.
-
-In this, the representation of knowledge may be thought to encompass not only language, but also the more diverse phenomena of symbiosis.
-
-\section{Declarative Language and its Universal Foundations}
-
-Declarative knowledge, as that term is to be used here, is more narrowly scoped, and is more particularly relevant to the process of exploiting general knowledge for the purpose of planning and engineering.
-This process of applying general knowledge... 
-
-\cite{dretske1981}
+The second part of the history looks more closely at an astonishingly fertile century in the story of logic and the foundations of mathematics, firmly establishing in the process the new discipline of \emph{mathematical logic}.
+By the close of the century which started in 1847 with Dedekind's paper on the definition of infinite collections, two logical systems were in place which are central to the story, the set theory ZFC formalising the theory of the cumulative hierarchy of well-founded sets described by Van Neumann\cite{neumann1930}, and Church's variant of the Simple Theory of Types (STT)\cite{church1930}.
 
 
-%\section{Set Theoretic Foundations}
+In the third part of the history we migrate into Computer Science to describe the further developments to Church's STT which were adopted by Mike Gordon for use in hardware verification.
+The documentation for the resulting system is briefly discussed in Appendix \ref{HOLspecs}, but the final part of the history gives a more concise account of the nature and importance of the innovations.
 
-%\section{Type Theoretic Foundations}
+There are a number of themes which the history is intended o bring out, which together contribute the explanation and justification of the idea that both first order set theory and Gordon's HOL are suitable bases for universal foundations systems for abstract semantics, and thence for a representation of declarative knowledge.
 
+A dominant focus is on the development of semantics, and within that the significance of ontology.
+Aother line of development concerns the concepts around logical systems, the kinds of system under consideration and the relationships between these different kinds of system, leading up to a conception of semantic reduction which creates an ordering by expressiveness of the systems involved and hence invites the question whether there could be any systems which are maximal in expressiveness, and hence might be termed universal semantic foundations.
+The kinds of distinction here for example, are that between:
+\begin{itemize}
+\item A `logic' in the sense of first order logic, which we might characterise as a language with semantics and inference rules, which can be extended axiomatically to address arbitrary  mathematical theories.
+
+\item A mathematical foundation system of the kind which would fulfill the role of logic in Frege's ``mathematics = logic + definitions'' by supporting the development of mathematics using only the foundation system and definitions of the relevant concepts.
+First order set theory, Russell's Theory of Types, and Church's STT are all mathematical foundations systems of this kind.
+
+\item
+These kinds of system do not admit universality of the kind here sought and the reasons for this will be discussed, in peparation for the identification of a distinct kind of system which I will be calling a semantic foundation system, which both ZFC, and Gordon's HOL can form a basis for, given some small elaborations of their semantics and axioms.
+
+\end{itemize}
+
+\section{Chapter 3 - Semantic Foundation Systems}
+
+This chapter is devoted to the definition of:
+\begin{itemize}
+\item Inductive finitary abstract syntax
+\item Universal abstract syntax
+\item Semantic Foundation Systems
+\item Semantic reduction
+\item Universal semantic foundation systems
+\end{itemize}
+
+and argues that Gordon's HOL provides both a universal abstract syntax and a universal semantic foundation system.
+
+The case for universality is supported by other examples and some systematic ways of constructing a variety of such systems.
+
+\ignore{\cite{scott_strachey_1971}}

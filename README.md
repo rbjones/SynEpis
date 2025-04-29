@@ -32,6 +32,8 @@ On this strategy I have now made zero progress.
 But the intention is to continue with the introductory chapter until such time as I have an account which is pretty well understood by Grok.
 I probably will soon need a new version of the forgrok document.
 
+# Contributing (CONTRIBUTING.md)
+
 
 
 

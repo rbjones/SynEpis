@@ -42,7 +42,13 @@ jobs:
         run: |
           mkdir -p site/pdfs
           cp index.html site/
-          cp ./*.pdf site/pdfs/
+          shopt -s nullglob
+          pdfs=(./*.pdf)
+          if [ ${#pdfs[@]} -gt 0 ]; then
+            cp "${pdfs[@]}" site/pdfs/
+          else
+            echo "No PDFs were produced in the repository root."
+          fi
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

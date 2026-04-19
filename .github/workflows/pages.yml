@@ -33,6 +33,7 @@ jobs:
             make \
             texlive-luatex \
             texlive-latex-extra \
+            texlive-fonts-extra \
             biber \
             fonts-texgyre
           fc-cache -f -v || true

@@ -33,7 +33,9 @@ jobs:
             make \
             texlive-luatex \
             texlive-latex-extra \
-            biber
+            biber \
+            fonts-texgyre
+          fc-cache -f -v || true
 
       - name: Build PDFs
         run: make

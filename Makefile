@@ -6,7 +6,7 @@ ARCHDIR=$(SRCDIR)/arch
 PAPDIR=$(GITDIR)/www.rbjones.com/src/rbjpub/www/papers
 
 TXTS=
-PAPDIRTEXS=p035.tex
+PAPDIRTEXS=
 LUALATEXS=notes.tex arch.tex forgrok02.tex
 LUABLATEXS=part1.tex
 CONTEXTS=LogKb.tex
@@ -29,13 +29,14 @@ PAPPDFS=$(PAPDIRTEXS:.tex=.pdf)
 LUAPDFS=$(LUALATEXS:.tex=.pdf) 
 LUABPDFS=$(LUABLATEXS:.tex=.pdf) 
 CONTEXTPDFS=$(CONTEXTS:.tex=.pdf)
+PDFS=$(PAPPDFS) $(LUAPDFS) $(LUABPDFS) $(CONTEXTPDFS)
 
 BIBFILES=rbj3.bib rbj4.bib rbj5.bib rbjfmu.bst
 
 SRCDIRCPY=$(CONTEXTS) $(BIBFILES) $(LUALATEXS)  $(LUABLATEXS) $(PDFLATEXS) $(MDS) $(TEXS) $(TXTS) Makefile
 PAPDIRCPY=$(PAPDIRTEXS)
 
-all: $(PDFS) $(LUAPDFS)
+all: $(PDFS)
 
 *.bbl:	%.tex rbj3.bib
 	bibtex %.tex
